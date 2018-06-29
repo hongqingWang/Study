@@ -22,7 +22,19 @@
 - (void)printMethodNamesOfClass:(Class)cls {
     
     unsigned int count;
-    class_copyMethodList(cls, &count);
+    Method *methodList = class_copyMethodList(cls, &count);
+    
+    NSMutableArray *methodArray = [NSMutableArray array];
+    
+    for (int i = 0; i < count; i++) {
+        Method method = methodList[i];
+        NSString *methodName = NSStringFromSelector(method_getName(method));
+        [methodArray addObject:methodName];
+    }
+    
+    free(methodList);
+    
+    NSLog(@"%@ - %@", cls, methodArray);
 }
 
 #pragma mark - Life Cycle
@@ -37,20 +49,25 @@
     self.person2 = [[Person alloc] init];
     self.person2.age = 2;
     
-    // person1 监听之前 - Person, Person
-    //    NSLog(@"person1 监听之前 - %@, %@", object_getClass(self.person1), object_getClass(self.person2));
-    
-    // person1 监听之前 - 0x10abbb140, 0x10abbb140
-    NSLog(@"person1 监听之前 - %p, %p", [self.person1 methodForSelector:@selector(setAge:)], [self.person2 methodForSelector:@selector(setAge:)]);
-    
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
     [self.person1 addObserver:self forKeyPath:@"age" options:options context:nil];
+    /*
+     NSKVONotifying_Person - (
+     "setAge:",
+     class,
+     dealloc,
+     "_isKVOA"
+     )
+     */
+    [self printMethodNamesOfClass:object_getClass(self.person1)];
     
-    // person1 监听之后 - NSKVONotifying_Person, Person
-    //    NSLog(@"person1 监听之后 - %@, %@", object_getClass(self.person1), object_getClass(self.person2));
-    
-    // person1 监听之后 - 0x10af64f8e, 0x10abbb140
-    NSLog(@"person1 监听之后 - %p, %p", [self.person1 methodForSelector:@selector(setAge:)], [self.person2 methodForSelector:@selector(setAge:)]);
+    /*
+     Person - (
+     "setAge:",
+     age
+     )
+     */
+    [self printMethodNamesOfClass:object_getClass(self.person2)];
 }
 
 - (void)dealloc {
@@ -60,9 +77,7 @@
 #pragma mark - Event Response
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    // isa -> NSKVONotifying_Person
     self.person1.age = 10;
-    // isa -> Person
     self.person2.age = 20;
 }
 
@@ -79,7 +94,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"点击屏幕";
+    label.text = @"直接看控制台";
     label.font = [UIFont systemFontOfSize:24];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];

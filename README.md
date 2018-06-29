@@ -3,6 +3,7 @@
 - [KVO](#2)
 	- [KVO 的基本使用](#2.1)
 	- [探究 KVO 本质](#2.2)
+	- [打印 KVO 新生成类中的方法](#2.3)
 
 <h2 id=2>KVO</h2>
 
@@ -146,3 +147,47 @@ person1 监听之后 - 0x10af64f8e, 0x10abbb140
     _NSSetIntValueAndNotify();
 }
 ```
+
+<h3 id=2.3>打印 KVO 新生成类中的方法</h3>
+
+利用运行时`class_copyMethodList()`方法，获取类中的方法列表，输出。
+
+```
+- (void)printMethodNamesOfClass:(Class)cls {
+    
+    unsigned int count;
+    Method *methodList = class_copyMethodList(cls, &count);
+    
+    NSMutableArray *methodArray = [NSMutableArray array];
+    
+    for (int i = 0; i < count; i++) {
+        Method method = methodList[i];
+        NSString *methodName = NSStringFromSelector(method_getName(method));
+        [methodArray addObject:methodName];
+    }
+    
+    free(methodList);
+    
+    NSLog(@"%@ - %@", cls, methodArray);
+}
+```
+
+```
+[self printMethodNamesOfClass:object_getClass(self.person1)];
+[self printMethodNamesOfClass:object_getClass(self.person2)];
+```
+
+```
+NSKVONotifying_Person - (
+    "setAge:",
+    class,
+    dealloc,
+    "_isKVOA"
+)
+Person - (
+"setAge:",
+age
+)
+```
+
+由此看出`NSKVONotifying_Person`类中的方法有`setAge:`、`class`、`dealloc`、`_isKVOA`。
