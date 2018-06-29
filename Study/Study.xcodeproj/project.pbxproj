@@ -13,6 +13,8 @@
 		184E1F9620E5E25D005C4097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */; };
 		184E1F9920E5E25D005C4097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1F9820E5E25D005C4097 /* main.m */; };
 		184E1FA120E5E396005C4097 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FA020E5E396005C4097 /* TableViewController.m */; };
+		184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */; };
+		184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		184E1F9820E5E25D005C4097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		184E1F9F20E5E396005C4097 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		184E1FA020E5E396005C4097 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		184E1FA620E5E6B4005C4097 /* KVOTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOTableViewController.h; sourceTree = "<group>"; };
+		184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTableViewController.m; sourceTree = "<group>"; };
+		184E1FA920E5E9EB005C4097 /* KVOBaseUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBaseUseViewController.h; sourceTree = "<group>"; };
+		184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBaseUseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 				184E1F8A20E5E25B005C4097 /* AppDelegate.m */,
 				184E1F9F20E5E396005C4097 /* TableViewController.h */,
 				184E1FA020E5E396005C4097 /* TableViewController.m */,
+				184E1FA220E5E63D005C4097 /* KVO */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
 				184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */,
@@ -69,6 +76,17 @@
 				184E1F9820E5E25D005C4097 /* main.m */,
 			);
 			path = Study;
+			sourceTree = "<group>";
+		};
+		184E1FA220E5E63D005C4097 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				184E1FA620E5E6B4005C4097 /* KVOTableViewController.h */,
+				184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */,
+				184E1FA920E5E9EB005C4097 /* KVOBaseUseViewController.h */,
+				184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
+				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,47 +1,43 @@
 //
-//  TableViewController.m
+//  KVOTableViewController.m
 //  Study
 //
 //  Created by 王红庆 on 2018/6/29.
 //  Copyright © 2018年 王红庆. All rights reserved.
 //
 
-#import "TableViewController.h"
 #import "KVOTableViewController.h"
+#import "KVOBaseUseViewController.h"
 
-@interface TableViewController ()
+@interface KVOTableViewController ()
 
-/// 知识点
-@property (nonatomic, strong) NSArray<NSString *> *titleArray;
+@property (nonatomic, strong) NSArray *kvoTitleArray;
 
 @end
 
-@implementation TableViewController
+@implementation KVOTableViewController
+
+static NSString * const ID = @"KVOCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
 }
 
-#pragma mark - TableViewDelegate
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
+#pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.titleArray.count;
+    return self.kvoTitleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString * const ID = @"CellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
-    cell.textLabel.text = self.titleArray[indexPath.row];
+    cell.textLabel.text = self.kvoTitleArray[indexPath.row];
     
     return cell;
 }
@@ -53,19 +49,14 @@
     switch (indexPath.row) {
         case 0:
         {
-            NSLog(@"未完成");
+            KVOBaseUseViewController *vc = [[KVOBaseUseViewController alloc] init];
+            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 1:
         {
-            KVOTableViewController *vc = [[KVOTableViewController alloc] init];
-            vc.navigationItem.title = self.titleArray[indexPath.row];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2:
-        {
-            NSLog(@"未完成");
+            
         }
             break;
             
@@ -75,15 +66,14 @@
 }
 
 #pragma mark - Getters And Setters
-- (NSArray *)titleArray {
-    if (_titleArray == nil) {
-        _titleArray = @[
-                        @"01-OC对象的本质",
-                        @"02-KVO",
-                        @"03-Category",
-                        ];
+- (NSArray *)kvoTitleArray {
+    if (_kvoTitleArray == nil) {
+        _kvoTitleArray = @[
+                           @"01-KVO基本使用",
+                           @"02-KVO子类内部方法"
+                           ];
     }
-    return _titleArray;
+    return _kvoTitleArray;
 }
 
 @end
