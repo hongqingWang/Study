@@ -16,6 +16,7 @@
 		184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */; };
 		184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */; };
 		184E1FAE20E62AF3005C4097 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FAD20E62AF2005C4097 /* Person.m */; };
+		184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBaseUseViewController.m; sourceTree = "<group>"; };
 		184E1FAC20E62AF2005C4097 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		184E1FAD20E62AF2005C4097 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		184E1FAF20E62FC0005C4097 /* KVOExplorationEssenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOExplorationEssenceViewController.h; sourceTree = "<group>"; };
+		184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOExplorationEssenceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */,
 				184E1FA920E5E9EB005C4097 /* KVOBaseUseViewController.h */,
 				184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */,
+				184E1FAF20E62FC0005C4097 /* KVOExplorationEssenceViewController.h */,
+				184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */,
 				184E1FAC20E62AF2005C4097 /* Person.h */,
 				184E1FAD20E62AF2005C4097 /* Person.m */,
 			);
@@ -171,6 +176,7 @@
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
+				184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

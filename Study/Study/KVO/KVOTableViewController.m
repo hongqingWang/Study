@@ -8,6 +8,7 @@
 
 #import "KVOTableViewController.h"
 #import "KVOBaseUseViewController.h"
+#import "KVOExplorationEssenceViewController.h"
 
 @interface KVOTableViewController ()
 
@@ -56,7 +57,9 @@ static NSString * const ID = @"KVOCellID";
             break;
         case 1:
         {
-            
+            KVOExplorationEssenceViewController *vc = [[KVOExplorationEssenceViewController alloc] init];
+            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
@@ -70,7 +73,7 @@ static NSString * const ID = @"KVOCellID";
     if (_kvoTitleArray == nil) {
         _kvoTitleArray = @[
                            @"01-KVO基本使用",
-                           @"02-KVO子类内部方法"
+                           @"02-探究KVO的本质"
                            ];
     }
     return _kvoTitleArray;
