@@ -19,6 +19,9 @@
 
 @implementation KVOPrintMethodClassNameViewController
 
+/**
+ * 输出某个类中的方法列表
+ */
 - (void)printMethodNamesOfClass:(Class)cls {
     
     unsigned int count;

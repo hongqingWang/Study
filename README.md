@@ -4,6 +4,7 @@
 	- [KVO 的基本使用](#2.1)
 	- [探究 KVO 本质](#2.2)
 	- [打印 KVO 新生成类中的方法](#2.3)
+	- [KVO 面试题](#2.4)
 
 <h2 id=2>KVO</h2>
 
@@ -191,3 +192,20 @@ age
 ```
 
 由此看出`NSKVONotifying_Person`类中的方法有`setAge:`、`class`、`dealloc`、`_isKVOA`。
+
+<h3 id=2.4>KVO 面试题</h3>
+
+1. KVO 的本质是什么？
+
+- 利用`RuntimeAPI`动态生成一个子类，并且让`instance`对象的`isa`指向这个全新的子类
+- 当修改`instance`对象的属性时，会调用`Foundation`的` _NSSetxxxValueAndNotify`函数
+	- `willChangeValueForKey:`
+	- `[super setter]`
+	- `didChangeValueForKey:`
+- 内部会触发监听器`(Observer)`的监听方法`(observeValueForKeyPath: ofObject: change: context:)`
+
+2. 如何手动触发 KVO?
+
+- 手动调用如下方法
+	- `willChangeValueForKey`
+	- `didChangeValueForKey`
