@@ -9,6 +9,7 @@
 #import "KVOTableViewController.h"
 #import "KVOBaseUseViewController.h"
 #import "KVOExplorationEssenceViewController.h"
+#import "KVOPrintMethodClassNameViewController.h"
 
 @interface KVOTableViewController ()
 
@@ -62,6 +63,13 @@ static NSString * const ID = @"KVOCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            KVOPrintMethodClassNameViewController *vc = [[KVOPrintMethodClassNameViewController alloc] init];
+            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -73,7 +81,8 @@ static NSString * const ID = @"KVOCellID";
     if (_kvoTitleArray == nil) {
         _kvoTitleArray = @[
                            @"01-KVO基本使用",
-                           @"02-探究KVO的本质"
+                           @"02-探究KVO的本质",
+                           @"03-打印KVO新生成类中的方法"
                            ];
     }
     return _kvoTitleArray;
