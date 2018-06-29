@@ -8,6 +8,7 @@
 
 #import "KVOExplorationEssenceViewController.h"
 #import "Person.h"
+#import <objc/runtime.h>
 
 @interface KVOExplorationEssenceViewController ()
 
@@ -29,9 +30,21 @@
 
     self.person2 = [[Person alloc] init];
     self.person2.age = 2;
+    
+    // person1 监听之前 - Person, Person
+//    NSLog(@"person1 监听之前 - %@, %@", object_getClass(self.person1), object_getClass(self.person2));
 
+    // person1 监听之前 - 0x10abbb140, 0x10abbb140
+    NSLog(@"person1 监听之前 - %p, %p", [self.person1 methodForSelector:@selector(setAge:)], [self.person2 methodForSelector:@selector(setAge:)]);
+    
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
     [self.person1 addObserver:self forKeyPath:@"age" options:options context:nil];
+
+    // person1 监听之后 - NSKVONotifying_Person, Person
+//    NSLog(@"person1 监听之后 - %@, %@", object_getClass(self.person1), object_getClass(self.person2));
+    
+    // person1 监听之后 - 0x10af64f8e, 0x10abbb140
+    NSLog(@"person1 监听之后 - %p, %p", [self.person1 methodForSelector:@selector(setAge:)], [self.person2 methodForSelector:@selector(setAge:)]);
 }
 
 - (void)dealloc {

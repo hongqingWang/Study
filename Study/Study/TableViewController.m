@@ -65,7 +65,37 @@
             break;
         case 2:
         {
-            NSLog(@"未完成");
+            NSLog(@"03-Category(未完) - 未完成");
+        }
+            break;
+        case 3:
+        {
+            NSLog(@"04-关联对象(未完) - 未完成");
+        }
+            break;
+        case 4:
+        {
+            NSLog(@"05-Block(未完) - 未完成");
+        }
+            break;
+        case 5:
+        {
+            NSLog(@"06-Runtime(未完) - 未完成");
+        }
+            break;
+        case 6:
+        {
+            NSLog(@"07-Runloop(未完) - 未完成");
+        }
+            break;
+        case 7:
+        {
+            NSLog(@"08-多线程(未完) - 未完成");
+        }
+            break;
+        case 8:
+        {
+            NSLog(@"09-内存管理(未完) - 未完成");
         }
             break;
             
@@ -78,9 +108,15 @@
 - (NSArray *)titleArray {
     if (_titleArray == nil) {
         _titleArray = @[
-                        @"01-OC对象的本质",
+                        @"01-OC对象的本质(未完)",
                         @"02-KVO",
-                        @"03-Category",
+                        @"03-Category(未完)",
+                        @"04-关联对象(未完)",
+                        @"05-Block(未完)",
+                        @"06-Runtime(未完)",
+                        @"07-Runloop(未完)",
+                        @"08-多线程(未完)",
+                        @"09-内存管理(未完)",
                         ];
     }
     return _titleArray;
