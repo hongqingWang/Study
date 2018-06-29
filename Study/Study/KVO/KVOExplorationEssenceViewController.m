@@ -11,7 +11,8 @@
 
 @interface KVOExplorationEssenceViewController ()
 
-@property (nonatomic, strong) Person *person;
+@property (nonatomic, strong) Person *person1;
+@property (nonatomic, strong) Person *person2;
 
 @end
 
@@ -23,20 +24,27 @@
     
     [self setupUI];
     
-    self.person = [[Person alloc] init];
-    self.person.age = 1;
+    self.person1 = [[Person alloc] init];
+    self.person1.age = 1;
+
+    self.person2 = [[Person alloc] init];
+    self.person2.age = 2;
+
     NSKeyValueObservingOptions options = NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld;
-    [self.person addObserver:self forKeyPath:@"age" options:options context:nil];
+    [self.person1 addObserver:self forKeyPath:@"age" options:options context:nil];
 }
 
 - (void)dealloc {
-    [self.person removeObserver:self forKeyPath:@"age"];
+    [self.person1 removeObserver:self forKeyPath:@"age"];
 }
 
 #pragma mark - Event Response
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    self.person.age = 10;
+    // isa -> NSKVONotifying_Person
+    self.person1.age = 10;
+    // isa -> Person
+    self.person2.age = 20;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
