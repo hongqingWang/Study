@@ -15,6 +15,7 @@
 		184E1FA120E5E396005C4097 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FA020E5E396005C4097 /* TableViewController.m */; };
 		184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */; };
 		184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */; };
+		184E1FAE20E62AF3005C4097 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FAD20E62AF2005C4097 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTableViewController.m; sourceTree = "<group>"; };
 		184E1FA920E5E9EB005C4097 /* KVOBaseUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOBaseUseViewController.h; sourceTree = "<group>"; };
 		184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOBaseUseViewController.m; sourceTree = "<group>"; };
+		184E1FAC20E62AF2005C4097 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		184E1FAD20E62AF2005C4097 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				184E1FA720E5E6B4005C4097 /* KVOTableViewController.m */,
 				184E1FA920E5E9EB005C4097 /* KVOBaseUseViewController.h */,
 				184E1FAA20E5E9EB005C4097 /* KVOBaseUseViewController.m */,
+				184E1FAC20E62AF2005C4097 /* Person.h */,
+				184E1FAD20E62AF2005C4097 /* Person.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
