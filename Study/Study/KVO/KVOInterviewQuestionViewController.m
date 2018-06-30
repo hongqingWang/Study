@@ -93,7 +93,7 @@
     UITextView *textView = [[UITextView alloc] init];
     textView.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:textView];
-    textView.frame = CGRectMake(16, 64, [UIScreen mainScreen].bounds.size.width - 32, [UIScreen mainScreen].bounds.size.height - 64);
+    textView.frame = CGRectMake(16, 64, [UIScreen mainScreen].bounds.size.width - 16, [UIScreen mainScreen].bounds.size.height - 164);
     self.textView = textView;
     
     UIButton *kvoButton = [[UIButton alloc] init];

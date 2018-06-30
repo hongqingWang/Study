@@ -81,6 +81,7 @@
 				184E1F9F20E5E396005C4097 /* TableViewController.h */,
 				184E1FA020E5E396005C4097 /* TableViewController.m */,
 				184E1FA220E5E63D005C4097 /* KVO */,
+				18A2B38B20E7628D00E1D5DE /* KVC */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
 				184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */,
@@ -107,6 +108,13 @@
 				184E1FAD20E62AF2005C4097 /* Person.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		18A2B38B20E7628D00E1D5DE /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

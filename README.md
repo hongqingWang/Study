@@ -5,6 +5,9 @@
 	- [探究 KVO 本质](#2.2)
 	- [打印 KVO 新生成类中的方法](#2.3)
 	- [KVO 面试题](#2.4)
+- [load、initialize](#3)
+	- [load、initialize方法的区别什么？](#3.1)
+	- [load、initialize的调用顺序？](#3.2)
 
 <h2 id=2>KVO</h2>
 
@@ -209,3 +212,33 @@ age
 - 手动调用如下方法
 	- `willChangeValueForKey`
 	- `didChangeValueForKey`
+
+<h2 id=3>load、initialize</h2>
+
+<h3 id=3.1>load、initialize方法的区别什么？</h3>
+
+1.调用方式
+
+- `load`是根据函数地址直接调用
+- `initialize`是通过`objc_msgSend`调用
+
+2.调用时刻
+
+- `load`是`runtime`加载类、分类的时候调用（只会调用`1`次）
+- `initialize`是类第一次接收到消息的时候调用，每一个类只会`initialize`一次（父类的`initialize`方法可能会被调用多次）
+
+<h3 id=3.2>load、initialize的调用顺序？</h3>
+
+1.`load`
+
+- 先调用类的`load`
+	- 先编译的类，优先调用`load`
+	- 调用子类的`load`之前，会先调用父类的`load`
+
+- 再调用分类的`load`
+	- 先编译的分类，优先调用`load`
+
+2.`initialize`
+
+- 先初始化父类
+- 再初始化子类（可能最终调用的是父类的`initialize`方法）
