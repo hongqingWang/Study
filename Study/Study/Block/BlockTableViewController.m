@@ -9,6 +9,7 @@
 #import "BlockTableViewController.h"
 #import "BlockAutoVariableViewController.h"
 #import "BlockStaticVariableViewController.h"
+#import "BlockGlobalVariabalViewController.h"
 
 @interface BlockTableViewController ()
 
@@ -62,6 +63,13 @@ static NSString * const ID = @"BlockCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            BlockGlobalVariabalViewController *vc = [[BlockGlobalVariabalViewController alloc] init];
+            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -73,7 +81,8 @@ static NSString * const ID = @"BlockCellID";
     if (_blockTitleArray == nil) {
         _blockTitleArray = @[
                                  @"01-Auto变量",
-                                 @"02-Static变量"
+                                 @"02-Static变量",
+                                 @"03-Global变量"
                                  ];
     }
     return _blockTitleArray;
