@@ -27,6 +27,7 @@
 		18A2B39F20E9D67C00E1D5DE /* BlockAutoVariableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39E20E9D67C00E1D5DE /* BlockAutoVariableViewController.m */; };
 		18A2B3A220E9D9B000E1D5DE /* BlockStaticVariableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3A120E9D9B000E1D5DE /* BlockStaticVariableViewController.m */; };
 		18A2B3A520E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3A420E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m */; };
+		18A2B3A820E9DE5E00E1D5DE /* BlockEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3A720E9DE5E00E1D5DE /* BlockEssenceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		18A2B3A120E9D9B000E1D5DE /* BlockStaticVariableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStaticVariableViewController.m; sourceTree = "<group>"; };
 		18A2B3A320E9DCD100E1D5DE /* BlockGlobalVariabalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockGlobalVariabalViewController.h; sourceTree = "<group>"; };
 		18A2B3A420E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockGlobalVariabalViewController.m; sourceTree = "<group>"; };
+		18A2B3A620E9DE5E00E1D5DE /* BlockEssenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockEssenceViewController.h; sourceTree = "<group>"; };
+		18A2B3A720E9DE5E00E1D5DE /* BlockEssenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockEssenceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				18A2B3A120E9D9B000E1D5DE /* BlockStaticVariableViewController.m */,
 				18A2B3A320E9DCD100E1D5DE /* BlockGlobalVariabalViewController.h */,
 				18A2B3A420E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m */,
+				18A2B3A620E9DE5E00E1D5DE /* BlockEssenceViewController.h */,
+				18A2B3A720E9DE5E00E1D5DE /* BlockEssenceViewController.m */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
 				18A2B39C20E9D58800E1D5DE /* BlockTableViewController.m in Sources */,
+				18A2B3A820E9DE5E00E1D5DE /* BlockEssenceViewController.m in Sources */,
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
 				184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */,
