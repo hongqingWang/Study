@@ -36,6 +36,13 @@
 - (void)setupUI {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"看控制台输出";
+    label.font = [UIFont systemFontOfSize:24];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    label.frame = self.view.bounds;
 }
 
 @end
