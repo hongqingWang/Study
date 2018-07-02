@@ -7,6 +7,8 @@
 //
 
 #import "AssociateAddIvarViewController.h"
+#import "AssociatePerson.h"
+#import "AssociatePerson+Category.h"
 
 @interface AssociateAddIvarViewController ()
 
@@ -14,24 +16,26 @@
 
 @implementation AssociateAddIvarViewController
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
+    
+    AssociatePerson *person = [[AssociatePerson alloc] init];
+    person.age = 10;
+    // [AssociatePerson setName:]: unrecognized selector sent to instance 0x600000001f60'
+//    person.name = @"wanghongqing";
+    
+    NSLog(@"%d", person.age);
+    
+//    NSLog(@"%@", person.name);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - SetupUI
+- (void)setupUI {
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
