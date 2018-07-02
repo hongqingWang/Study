@@ -20,6 +20,7 @@
 		184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */; };
 		184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */; };
 		18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */; };
+		18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOInterviewQuestionViewController.m; sourceTree = "<group>"; };
 		18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateTableViewController.h; sourceTree = "<group>"; };
 		18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociateTableViewController.m; sourceTree = "<group>"; };
+		18A2B39020E9C03700E1D5DE /* AssociateAddIvarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateAddIvarViewController.h; sourceTree = "<group>"; };
+		18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociateAddIvarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 			children = (
 				18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */,
 				18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */,
+				18A2B39020E9C03700E1D5DE /* AssociateAddIvarViewController.h */,
+				18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */,
 			);
 			path = Associate;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
 				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */,
+				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,

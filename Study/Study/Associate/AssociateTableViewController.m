@@ -7,6 +7,7 @@
 //
 
 #import "AssociateTableViewController.h"
+#import "AssociateAddIvarViewController.h"
 
 @interface AssociateTableViewController ()
 
@@ -48,9 +49,9 @@ static NSString * const ID = @"AssociateCellID";
     switch (indexPath.row) {
         case 0:
         {
-//            KVOBaseUseViewController *vc = [[KVOBaseUseViewController alloc] init];
-//            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
+            AssociateAddIvarViewController *vc = [[AssociateAddIvarViewController alloc] init];
+            vc.navigationItem.title = self.associateTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 1:
