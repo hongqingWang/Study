@@ -26,10 +26,10 @@
     person.age = 10;
     // [AssociatePerson setName:]: unrecognized selector sent to instance 0x600000001f60'
 //    person.name = @"wanghongqing";
+    person.name = @"wanghongqing";
     
     NSLog(@"%d", person.age);
-    
-//    NSLog(@"%@", person.name);
+    NSLog(@"%@", person.name);
 }
 
 #pragma mark - SetupUI
