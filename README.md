@@ -8,6 +8,8 @@
 - [load、initialize](#3)
 	- [load、initialize方法的区别什么？](#3.1)
 	- [load、initialize的调用顺序？](#3.2)
+- [Associate](#4)
+	- [利用Associate为Category增加成员变量](#4.1)
 
 <h2 id=2>KVO</h2>
 
@@ -242,3 +244,27 @@ age
 
 - 先初始化父类
 - 再初始化子类（可能最终调用的是父类的`initialize`方法）
+
+<h2 id=4>Associate</h2>
+
+<h3 id=4.1>利用Associate为Category增加成员变量</h3>
+
+在`AssociatePerson+Category.h`中声明属性`name`
+
+```
+@property (nonatomic, copy) NSString *name;
+```
+
+在`AssociatePerson+Category.m`中重写`setName:`、`name`的方法实现
+
+```
+- (void)setName:(NSString *)name {
+    
+    objc_setAssociatedObject(self, @selector(name), name, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSString *)name {
+    
+    return objc_getAssociatedObject(self, _cmd);
+}
+```
