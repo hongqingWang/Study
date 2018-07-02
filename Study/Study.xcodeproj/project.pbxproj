@@ -19,6 +19,7 @@
 		184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */; };
 		184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */; };
 		184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */; };
+		18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPrintMethodClassNameViewController.m; sourceTree = "<group>"; };
 		184E1FB520E6BA7B005C4097 /* KVOInterviewQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOInterviewQuestionViewController.h; sourceTree = "<group>"; };
 		184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOInterviewQuestionViewController.m; sourceTree = "<group>"; };
+		18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateTableViewController.h; sourceTree = "<group>"; };
+		18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociateTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 				184E1FA020E5E396005C4097 /* TableViewController.m */,
 				184E1FA220E5E63D005C4097 /* KVO */,
 				18A2B38B20E7628D00E1D5DE /* KVC */,
+				18A2B38C20E9BEB100E1D5DE /* Associate */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
 				184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */,
@@ -115,6 +119,15 @@
 			children = (
 			);
 			path = KVC;
+			sourceTree = "<group>";
+		};
+		18A2B38C20E9BEB100E1D5DE /* Associate */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */,
+				18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */,
+			);
+			path = Associate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
 				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
