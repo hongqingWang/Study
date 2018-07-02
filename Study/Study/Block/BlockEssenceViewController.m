@@ -33,6 +33,23 @@
     NSLog(@"%@", [[[block class] superclass] superclass]);
     // NSObject
     NSLog(@"%@", [[[[block class] superclass] superclass] superclass]);
+    
+    int a = 10;
+    void (^block2)(void) = ^{
+        
+        NSLog(@"a is %d", a);
+    };
+    
+    // __NSGlobalBlock__
+    NSLog(@"%@", [block class]);
+    
+    // __NSMallocBlock__
+    NSLog(@"%@", [block2 class]);
+    
+    // __NSStackBlock__
+    NSLog(@"%@", [^{
+        NSLog(@"%d", a);
+    } class]);
 }
 
 #pragma mark - SetupUI
