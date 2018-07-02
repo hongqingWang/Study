@@ -1,23 +1,23 @@
 //
-//  AssociateTableViewController.m
+//  BlockTableViewController.m
 //  Study
 //
 //  Created by 王红庆 on 2018/7/2.
 //  Copyright © 2018年 王红庆. All rights reserved.
 //
 
-#import "AssociateTableViewController.h"
-#import "AssociateAddIvarViewController.h"
+#import "BlockTableViewController.h"
+#import "BlockAutoVariableViewController.h"
 
-@interface AssociateTableViewController ()
+@interface BlockTableViewController ()
 
-@property (nonatomic, strong) NSArray *associateTitleArray;
+@property (nonatomic, strong) NSArray *blockTitleArray;
 
 @end
 
-@implementation AssociateTableViewController
+@implementation BlockTableViewController
 
-static NSString * const ID = @"AssociateCellID";
+static NSString * const ID = @"BlockCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +27,7 @@ static NSString * const ID = @"AssociateCellID";
 
 #pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.associateTitleArray.count;
+    return self.blockTitleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -37,7 +37,7 @@ static NSString * const ID = @"AssociateCellID";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
-    cell.textLabel.text = self.associateTitleArray[indexPath.row];
+    cell.textLabel.text = self.blockTitleArray[indexPath.row];
     
     return cell;
 }
@@ -49,8 +49,8 @@ static NSString * const ID = @"AssociateCellID";
     switch (indexPath.row) {
         case 0:
         {
-            AssociateAddIvarViewController *vc = [[AssociateAddIvarViewController alloc] init];
-            vc.navigationItem.title = self.associateTitleArray[indexPath.row];
+            BlockAutoVariableViewController *vc = [[BlockAutoVariableViewController alloc] init];
+            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -61,13 +61,13 @@ static NSString * const ID = @"AssociateCellID";
 }
 
 #pragma mark - Getters And Setters
-- (NSArray *)associateTitleArray {
-    if (_associateTitleArray == nil) {
-        _associateTitleArray = @[
-                           @"01-为Category增加成员变量"
-                           ];
+- (NSArray *)blockTitleArray {
+    if (_blockTitleArray == nil) {
+        _blockTitleArray = @[
+                                 @"01-Auto变量"
+                                 ];
     }
-    return _associateTitleArray;
+    return _blockTitleArray;
 }
 
 @end

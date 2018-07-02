@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 #import "KVOTableViewController.h"
 #import "AssociateTableViewController.h"
+#import "BlockTableViewController.h"
 
 @interface TableViewController ()
 
@@ -82,7 +83,9 @@
             break;
         case 5:
         {
-            NSLog(@"05-Block(未完) - 未完成");
+            BlockTableViewController *vc = [[BlockTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 6:
@@ -120,7 +123,7 @@
                         @"03-KVC(未完)",
                         @"04-Category(未完)",
                         @"05-关联对象",
-                        @"06-Block(未完)",
+                        @"06-Block",
                         @"07-Runtime(未完)",
                         @"08-Runloop(未完)",
                         @"09-多线程(未完)",

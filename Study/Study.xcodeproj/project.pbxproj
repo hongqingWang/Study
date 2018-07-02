@@ -23,6 +23,8 @@
 		18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */; };
 		18A2B39520E9C0F300E1D5DE /* AssociatePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39420E9C0F300E1D5DE /* AssociatePerson.m */; };
 		18A2B39820E9C10D00E1D5DE /* AssociatePerson+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39720E9C10D00E1D5DE /* AssociatePerson+Category.m */; };
+		18A2B39C20E9D58800E1D5DE /* BlockTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39B20E9D58800E1D5DE /* BlockTableViewController.m */; };
+		18A2B39F20E9D67C00E1D5DE /* BlockAutoVariableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39E20E9D67C00E1D5DE /* BlockAutoVariableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,10 @@
 		18A2B39420E9C0F300E1D5DE /* AssociatePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociatePerson.m; sourceTree = "<group>"; };
 		18A2B39620E9C10D00E1D5DE /* AssociatePerson+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AssociatePerson+Category.h"; sourceTree = "<group>"; };
 		18A2B39720E9C10D00E1D5DE /* AssociatePerson+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AssociatePerson+Category.m"; sourceTree = "<group>"; };
+		18A2B39A20E9D58800E1D5DE /* BlockTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockTableViewController.h; sourceTree = "<group>"; };
+		18A2B39B20E9D58800E1D5DE /* BlockTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockTableViewController.m; sourceTree = "<group>"; };
+		18A2B39D20E9D67C00E1D5DE /* BlockAutoVariableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockAutoVariableViewController.h; sourceTree = "<group>"; };
+		18A2B39E20E9D67C00E1D5DE /* BlockAutoVariableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockAutoVariableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 				184E1FA220E5E63D005C4097 /* KVO */,
 				18A2B38B20E7628D00E1D5DE /* KVC */,
 				18A2B38C20E9BEB100E1D5DE /* Associate */,
+				18A2B39920E9D57600E1D5DE /* Block */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
 				184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */,
@@ -143,6 +150,17 @@
 				18A2B39720E9C10D00E1D5DE /* AssociatePerson+Category.m */,
 			);
 			path = Associate;
+			sourceTree = "<group>";
+		};
+		18A2B39920E9D57600E1D5DE /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B39A20E9D58800E1D5DE /* BlockTableViewController.h */,
+				18A2B39B20E9D58800E1D5DE /* BlockTableViewController.m */,
+				18A2B39D20E9D67C00E1D5DE /* BlockAutoVariableViewController.h */,
+				18A2B39E20E9D67C00E1D5DE /* BlockAutoVariableViewController.m */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,12 +237,14 @@
 				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
 				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */,
+				18A2B39F20E9D67C00E1D5DE /* BlockAutoVariableViewController.m in Sources */,
 				18A2B39820E9C10D00E1D5DE /* AssociatePerson+Category.m in Sources */,
 				18A2B39520E9C0F300E1D5DE /* AssociatePerson.m in Sources */,
 				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
+				18A2B39C20E9D58800E1D5DE /* BlockTableViewController.m in Sources */,
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
 				184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */,
