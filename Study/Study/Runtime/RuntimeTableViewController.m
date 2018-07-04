@@ -54,27 +54,6 @@ static NSString * const ID = @"RuntimeCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 1:
-        {
-//            BlockStaticVariableViewController *vc = [[BlockStaticVariableViewController alloc] init];
-//            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2:
-        {
-//            BlockGlobalVariabalViewController *vc = [[BlockGlobalVariabalViewController alloc] init];
-//            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 3:
-        {
-//            BlockEssenceViewController *vc = [[BlockEssenceViewController alloc] init];
-//            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
             
         default:
             break;

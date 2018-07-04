@@ -7,6 +7,7 @@
 //
 
 #import "RuntimeDynamicAddMethodViewController.h"
+#import "RuntimePerson.h"
 
 @interface RuntimeDynamicAddMethodViewController ()
 
@@ -20,20 +21,10 @@
     
     [self setupUI];
     
-    int age = 10;
+    RuntimePerson *person = [[RuntimePerson alloc] init];
+    [person runtimeInstanceMethod];
     
-    void (^block)(void) = ^{
-        
-        // age is 10
-        NSLog(@"age is %d", age);
-    };
-    
-    age = 20;
-    
-    // block outside age is 20
-    NSLog(@"block outside age is %d", age);
-    
-    block();
+    [RuntimePerson runtimeClassMethod];
 }
 
 #pragma mark - SetupUI

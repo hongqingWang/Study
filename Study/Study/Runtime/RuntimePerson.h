@@ -10,6 +10,7 @@
 
 @interface RuntimePerson : NSObject
 
-+ (void)runtimeTest;
+- (void)runtimeInstanceMethod;
++ (void)runtimeClassMethod;
 
 @end
