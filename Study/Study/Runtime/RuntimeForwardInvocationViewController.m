@@ -7,7 +7,7 @@
 //
 
 #import "RuntimeForwardInvocationViewController.h"
-#import "RuntimePerson.h"
+#import "RuntimeTeacher.h"
 
 @interface RuntimeForwardInvocationViewController ()
 
@@ -21,10 +21,8 @@
     
     [self setupUI];
     
-//    RuntimePerson *person = [[RuntimePerson alloc] init];
-//    [person runtimeInstanceMethod];
-//    
-//    [RuntimePerson runtimeClassMethod];
+    RuntimeTeacher *teacher = [[RuntimeTeacher alloc] init];
+    [teacher runtimeInstanceMethod];
 }
 
 #pragma mark - SetupUI

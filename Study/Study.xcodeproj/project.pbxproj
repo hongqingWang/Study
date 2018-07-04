@@ -35,6 +35,7 @@
 		18A2B3BB20ECA4A900E1D5DE /* RuntimeDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3BA20ECA4A900E1D5DE /* RuntimeDog.m */; };
 		18A2B3BE20ECA54E00E1D5DE /* RuntimeForwardMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3BD20ECA54E00E1D5DE /* RuntimeForwardMethodViewController.m */; };
 		18A2B3C120ECA70E00E1D5DE /* RuntimeCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3C020ECA70E00E1D5DE /* RuntimeCat.m */; };
+		18A2B3C420ECAE5F00E1D5DE /* RuntimeTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3C320ECAE5F00E1D5DE /* RuntimeTeacher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		18A2B3BD20ECA54E00E1D5DE /* RuntimeForwardMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeForwardMethodViewController.m; sourceTree = "<group>"; };
 		18A2B3BF20ECA70E00E1D5DE /* RuntimeCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeCat.h; sourceTree = "<group>"; };
 		18A2B3C020ECA70E00E1D5DE /* RuntimeCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeCat.m; sourceTree = "<group>"; };
+		18A2B3C220ECAE5F00E1D5DE /* RuntimeTeacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTeacher.h; sourceTree = "<group>"; };
+		18A2B3C320ECAE5F00E1D5DE /* RuntimeTeacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTeacher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 				18A2B3BA20ECA4A900E1D5DE /* RuntimeDog.m */,
 				18A2B3BF20ECA70E00E1D5DE /* RuntimeCat.h */,
 				18A2B3C020ECA70E00E1D5DE /* RuntimeCat.m */,
+				18A2B3C220ECAE5F00E1D5DE /* RuntimeTeacher.h */,
+				18A2B3C320ECAE5F00E1D5DE /* RuntimeTeacher.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				18A2B3AC20EC5DB200E1D5DE /* RuntimeTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
+				18A2B3C420ECAE5F00E1D5DE /* RuntimeTeacher.m in Sources */,
 				184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */,
 				184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */,
 			);

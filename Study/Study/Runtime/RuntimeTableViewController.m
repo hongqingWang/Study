@@ -63,6 +63,13 @@ static NSString * const ID = @"RuntimeCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            RuntimeForwardInvocationViewController *vc = [[RuntimeForwardInvocationViewController alloc] init];
+            vc.navigationItem.title = self.runtimeTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -74,7 +81,8 @@ static NSString * const ID = @"RuntimeCellID";
     if (_runtimeTitleArray == nil) {
         _runtimeTitleArray = @[
                              @"01-动态添加方法",
-                             @"02-消息转发"
+                             @"02-消息转发",
+                             @"03-方法签名"
                              ];
     }
     return _runtimeTitleArray;
