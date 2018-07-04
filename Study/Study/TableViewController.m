@@ -10,6 +10,7 @@
 #import "KVOTableViewController.h"
 #import "AssociateTableViewController.h"
 #import "BlockTableViewController.h"
+#import "RuntimeTableViewController.h"
 
 @interface TableViewController ()
 
@@ -90,7 +91,9 @@
             break;
         case 6:
         {
-            NSLog(@"06-Runtime(未完) - 未完成");
+            RuntimeTableViewController *vc = [[RuntimeTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 7:
@@ -124,7 +127,7 @@
                         @"04-Category(未完)",
                         @"05-关联对象",
                         @"06-Block",
-                        @"07-Runtime(未完)",
+                        @"07-Runtime",
                         @"08-Runloop(未完)",
                         @"09-多线程(未完)",
                         @"10-内存管理(未完)",
