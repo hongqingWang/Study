@@ -29,6 +29,8 @@
 		18A2B3A520E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3A420E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m */; };
 		18A2B3A820E9DE5E00E1D5DE /* BlockEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3A720E9DE5E00E1D5DE /* BlockEssenceViewController.m */; };
 		18A2B3AC20EC5DB200E1D5DE /* RuntimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3AB20EC5DB200E1D5DE /* RuntimeTableViewController.m */; };
+		18A2B3AF20EC5EDB00E1D5DE /* RuntimePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3AE20EC5EDB00E1D5DE /* RuntimePerson.m */; };
+		18A2B3B220EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3B120EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,10 @@
 		18A2B3A720E9DE5E00E1D5DE /* BlockEssenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockEssenceViewController.m; sourceTree = "<group>"; };
 		18A2B3AA20EC5DB200E1D5DE /* RuntimeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTableViewController.h; sourceTree = "<group>"; };
 		18A2B3AB20EC5DB200E1D5DE /* RuntimeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTableViewController.m; sourceTree = "<group>"; };
+		18A2B3AD20EC5EDB00E1D5DE /* RuntimePerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimePerson.h; sourceTree = "<group>"; };
+		18A2B3AE20EC5EDB00E1D5DE /* RuntimePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimePerson.m; sourceTree = "<group>"; };
+		18A2B3B020EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeDynamicAddMethodViewController.h; sourceTree = "<group>"; };
+		18A2B3B120EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeDynamicAddMethodViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,10 @@
 			children = (
 				18A2B3AA20EC5DB200E1D5DE /* RuntimeTableViewController.h */,
 				18A2B3AB20EC5DB200E1D5DE /* RuntimeTableViewController.m */,
+				18A2B3B020EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.h */,
+				18A2B3B120EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.m */,
+				18A2B3AD20EC5EDB00E1D5DE /* RuntimePerson.h */,
+				18A2B3AE20EC5EDB00E1D5DE /* RuntimePerson.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -263,10 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
+				18A2B3AF20EC5EDB00E1D5DE /* RuntimePerson.m in Sources */,
 				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */,
 				18A2B39F20E9D67C00E1D5DE /* BlockAutoVariableViewController.m in Sources */,
 				18A2B39820E9C10D00E1D5DE /* AssociatePerson+Category.m in Sources */,
+				18A2B3B220EC5F5E00E1D5DE /* RuntimeDynamicAddMethodViewController.m in Sources */,
 				18A2B39520E9C0F300E1D5DE /* AssociatePerson.m in Sources */,
 				18A2B3A220E9D9B000E1D5DE /* BlockStaticVariableViewController.m in Sources */,
 				18A2B3A520E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m in Sources */,

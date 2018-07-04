@@ -7,6 +7,7 @@
 //
 
 #import "RuntimeTableViewController.h"
+#import "RuntimeDynamicAddMethodViewController.h"
 
 @interface RuntimeTableViewController ()
 
@@ -48,9 +49,9 @@ static NSString * const ID = @"RuntimeCellID";
     switch (indexPath.row) {
         case 0:
         {
-//            BlockAutoVariableViewController *vc = [[BlockAutoVariableViewController alloc] init];
-//            vc.navigationItem.title = self.blockTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
+            RuntimeDynamicAddMethodViewController *vc = [[RuntimeDynamicAddMethodViewController alloc] init];
+            vc.navigationItem.title = self.runtimeTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 1:
