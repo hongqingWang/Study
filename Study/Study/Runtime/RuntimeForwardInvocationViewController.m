@@ -23,6 +23,8 @@
     
     RuntimeTeacher *teacher = [[RuntimeTeacher alloc] init];
     [teacher runtimeInstanceMethod];
+    
+    [RuntimeTeacher runtimeClassMethod];
 }
 
 #pragma mark - SetupUI

@@ -20,4 +20,12 @@
     return [super forwardingTargetForSelector:aSelector];
 }
 
++ (id)forwardingTargetForSelector:(SEL)aSelector {
+    
+    if (aSelector == @selector(runtimeClassMethod)) {
+        return [RuntimeCat class];
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
 @end

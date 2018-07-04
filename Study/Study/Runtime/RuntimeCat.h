@@ -11,5 +11,6 @@
 @interface RuntimeCat : NSObject
 
 - (void)runtimeInstanceMethod;
++ (void)runtimeClassMethod;
 
 @end

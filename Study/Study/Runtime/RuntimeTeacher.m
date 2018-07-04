@@ -20,7 +20,20 @@
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
     
-    NSLog(@"自定义输出");
+    NSLog(@"instance - 自定义输出");
+}
+
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    
+    if (aSelector == @selector(runtimeClassMethod)) {
+        return [NSMethodSignature signatureWithObjCTypes:"v16@0:8"];
+    }
+    return [super methodSignatureForSelector:aSelector];
+}
+
++ (void)forwardInvocation:(NSInvocation *)anInvocation {
+    
+    NSLog(@"class - 自定义输出");
 }
 
 @end

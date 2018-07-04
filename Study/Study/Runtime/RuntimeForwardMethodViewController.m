@@ -23,6 +23,8 @@
     
     RuntimeDog *dog = [[RuntimeDog alloc] init];
     [dog runtimeInstanceMethod];
+    
+    [RuntimeDog runtimeClassMethod];
 }
 
 #pragma mark - SetupUI

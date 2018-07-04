@@ -11,5 +11,6 @@
 @interface RuntimeDog : NSObject
 
 - (void)runtimeInstanceMethod;
++ (void)runtimeClassMethod;
 
 @end

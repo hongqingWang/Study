@@ -11,5 +11,6 @@
 @interface RuntimeTeacher : NSObject
 
 - (void)runtimeInstanceMethod;
++ (void)runtimeClassMethod;
 
 @end

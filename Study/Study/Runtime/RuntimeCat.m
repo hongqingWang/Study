@@ -14,4 +14,8 @@
     NSLog(@"%s", __FUNCTION__);
 }
 
++ (void)runtimeClassMethod {
+    NSLog(@"%s", __FUNCTION__);
+}
+
 @end
