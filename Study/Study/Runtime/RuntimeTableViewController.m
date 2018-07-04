@@ -10,6 +10,7 @@
 #import "RuntimeDynamicAddMethodViewController.h"
 #import "RuntimeForwardMethodViewController.h"
 #import "RuntimeForwardInvocationViewController.h"
+#import "RuntimeAviodCrashViewController.h"
 
 @interface RuntimeTableViewController ()
 
@@ -70,6 +71,13 @@ static NSString * const ID = @"RuntimeCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 3:
+        {
+            RuntimeAviodCrashViewController *vc = [[RuntimeAviodCrashViewController alloc] init];
+            vc.navigationItem.title = self.runtimeTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -82,7 +90,8 @@ static NSString * const ID = @"RuntimeCellID";
         _runtimeTitleArray = @[
                              @"01-动态添加方法",
                              @"02-消息转发",
-                             @"03-方法签名"
+                             @"03-方法签名",
+                             @"04-避免crash"
                              ];
     }
     return _runtimeTitleArray;
