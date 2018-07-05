@@ -11,6 +11,7 @@
 #import "RuntimeForwardMethodViewController.h"
 #import "RuntimeForwardInvocationViewController.h"
 #import "RuntimeAviodCrashViewController.h"
+#import "RuntimeExchangeMethodViewController.h"
 
 @interface RuntimeTableViewController ()
 
@@ -78,6 +79,13 @@ static NSString * const ID = @"RuntimeCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 4:
+        {
+            RuntimeExchangeMethodViewController *vc = [[RuntimeExchangeMethodViewController alloc] init];
+            vc.navigationItem.title = self.runtimeTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -91,7 +99,8 @@ static NSString * const ID = @"RuntimeCellID";
                              @"01-动态添加方法",
                              @"02-消息转发",
                              @"03-方法签名",
-                             @"04-避免crash"
+                             @"04-避免crash",
+                             @"05-方法交换"
                              ];
     }
     return _runtimeTitleArray;

@@ -38,6 +38,9 @@
 		18A2B3C420ECAE5F00E1D5DE /* RuntimeTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3C320ECAE5F00E1D5DE /* RuntimeTeacher.m */; };
 		18A2B3CB20ECDA8800E1D5DE /* RuntimeAviodCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3CA20ECDA8800E1D5DE /* RuntimeAviodCrash.m */; };
 		18A2B3CE20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3CD20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m */; };
+		18A2B3D220EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3D020EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m */; };
+		18A2B3D320EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A2B3D120EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.xib */; };
+		18A2B3D720EDB32400E1D5DE /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3D620EDB32400E1D5DE /* UIControl+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +104,11 @@
 		18A2B3CA20ECDA8800E1D5DE /* RuntimeAviodCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeAviodCrash.m; sourceTree = "<group>"; };
 		18A2B3CC20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeAviodCrashViewController.h; sourceTree = "<group>"; };
 		18A2B3CD20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeAviodCrashViewController.m; sourceTree = "<group>"; };
+		18A2B3CF20EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeExchangeMethodViewController.h; sourceTree = "<group>"; };
+		18A2B3D020EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeExchangeMethodViewController.m; sourceTree = "<group>"; };
+		18A2B3D120EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuntimeExchangeMethodViewController.xib; sourceTree = "<group>"; };
+		18A2B3D520EDB32400E1D5DE /* UIControl+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Extension.h"; sourceTree = "<group>"; };
+		18A2B3D620EDB32400E1D5DE /* UIControl+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 				18A2B38C20E9BEB100E1D5DE /* Associate */,
 				18A2B39920E9D57600E1D5DE /* Block */,
 				18A2B3A920EC5D9A00E1D5DE /* Runtime */,
+				18A2B3D420EDB30700E1D5DE /* Category */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
 				184E1F9420E5E25D005C4097 /* LaunchScreen.storyboard */,
@@ -222,6 +231,9 @@
 				18A2B3B420ECA25B00E1D5DE /* RuntimeForwardInvocationViewController.m */,
 				18A2B3CC20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.h */,
 				18A2B3CD20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m */,
+				18A2B3CF20EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.h */,
+				18A2B3D020EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m */,
+				18A2B3D120EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.xib */,
 				18A2B3AD20EC5EDB00E1D5DE /* RuntimePerson.h */,
 				18A2B3AE20EC5EDB00E1D5DE /* RuntimePerson.m */,
 				18A2B3B920ECA4A900E1D5DE /* RuntimeDog.h */,
@@ -234,6 +246,15 @@
 				18A2B3CA20ECDA8800E1D5DE /* RuntimeAviodCrash.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		18A2B3D420EDB30700E1D5DE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18A2B3D520EDB32400E1D5DE /* UIControl+Extension.h */,
+				18A2B3D620EDB32400E1D5DE /* UIControl+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +318,7 @@
 				184E1F9620E5E25D005C4097 /* LaunchScreen.storyboard in Resources */,
 				184E1F9320E5E25D005C4097 /* Assets.xcassets in Resources */,
 				184E1F9120E5E25B005C4097 /* Main.storyboard in Resources */,
+				18A2B3D320EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A2B3BE20ECA54E00E1D5DE /* RuntimeForwardMethodViewController.m in Sources */,
+				18A2B3D220EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m in Sources */,
 				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
+				18A2B3D720EDB32400E1D5DE /* UIControl+Extension.m in Sources */,
 				18A2B3AF20EC5EDB00E1D5DE /* RuntimePerson.m in Sources */,
 				184E1FAE20E62AF3005C4097 /* Person.m in Sources */,
 				184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */,
