@@ -21,9 +21,9 @@
 - (void)qq_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     
     [self qq_sendAction:action to:target forEvent:event];
-    NSLog(@"%@", self);
-    NSLog(@"%@", target);
-    NSLog(@"%@", NSStringFromSelector(action));
+//    NSLog(@"%@", self);
+//    NSLog(@"%@", target);
+//    NSLog(@"%@", NSStringFromSelector(action));
 }
 
 @end
