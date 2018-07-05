@@ -12,6 +12,8 @@
 	- [利用Associate为Category增加成员变量](#4.1)
 - [Runtime](#7)
 	- [方法交换](#7.1)
+- [Runloop](#8)
+	- [线程保活](#8.1)
 
 <h2 id=2>KVO</h2>
 
@@ -299,5 +301,46 @@ age
     NSLog(@"%@", self);
     NSLog(@"%@", target);
     NSLog(@"%@", NSStringFromSelector(action));
+}
+```
+
+<h2 id=8>Runloop</h2>
+
+<h3 id=8.1>线程保活</h3>
+
+保持线程一直处于活跃状态，不必要每次执行完任务以后就被`dealloc`
+
+```
+self.thread = [[RunloopThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+[self.thread start];
+```
+
+```
+/**
+ * 线程保活
+ */
+- (void)run {
+    
+    NSLog(@"start - %s - %@", __FUNCTION__, [NSThread currentThread]);
+    
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+    
+    NSLog(@"end - %s - %@", __FUNCTION__, [NSThread currentThread]);
+}
+```
+
+```
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+/**
+ * 真正要执行的方法
+ */
+- (void)test {
+    
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
 }
 ```
