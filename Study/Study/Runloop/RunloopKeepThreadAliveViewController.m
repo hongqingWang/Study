@@ -12,6 +12,7 @@
 @interface RunloopKeepThreadAliveViewController ()
 
 @property (nonatomic, strong) RunloopThread *thread;
+@property (nonatomic, assign, getter=isStopped) BOOL stopped;
 
 @end
 
@@ -23,24 +24,28 @@
     
     [self setupUI];
     
-    self.thread = [[RunloopThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+    __weak typeof(self) weakSelf = self;
+    self.thread = [[RunloopThread alloc] initWithBlock:^{
+        
+        NSLog(@"start - %s - %@", __FUNCTION__, [NSThread currentThread]);
+        
+        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+        
+        while (weakSelf && !weakSelf.isStopped) {
+            [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        }
+        
+        NSLog(@"end - %s - %@", __FUNCTION__, [NSThread currentThread]);
+    }];
     [self.thread start];
 }
 
-#pragma mark - Event Response
-/**
- * 线程保活
- */
-- (void)run {
-    
-    NSLog(@"start - %s - %@", __FUNCTION__, [NSThread currentThread]);
-    
-    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop] run];
-    
-    NSLog(@"end - %s - %@", __FUNCTION__, [NSThread currentThread]);
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+    [self stopThread];
 }
 
+#pragma mark - Event Response
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
@@ -54,17 +59,36 @@
     NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
 }
 
+/**
+ * button 点击方法
+ */
+- (void)stopThread {
+    
+    [self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+}
+
+/**
+ * 停止Runloop
+ */
+- (void)stopSubThread {
+    
+    self.stopped = YES;
+    
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
+}
+
 #pragma mark - SetupUI
 - (void)setupUI {
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UILabel *label = [[UILabel alloc] init];
-    label.text = @"看控制台输出";
-    label.font = [UIFont systemFontOfSize:24];
-    label.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:label];
-    label.frame = self.view.bounds;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"停止线程" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    button.frame = CGRectMake(100, 100, 100, 35);
+    [button addTarget:self action:@selector(stopThread) forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end

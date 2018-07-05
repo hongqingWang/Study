@@ -344,3 +344,119 @@ self.thread = [[RunloopThread alloc] initWithTarget:self selector:@selector(run)
     NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
 }
 ```
+
+但是上面那样做是会出现循环引用的，控制器和`Thread`在`pop`到之前的页面的时候也不会被销毁。明明都已经`pop`到之前的页面了，但是还是存在的。
+
+![](https://upload-images.jianshu.io/upload_images/2069062-3ff19b46cae4ca96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+```
+[[NSRunLoop currentRunLoop] run];
+```
+
+上面这句代码会开启一个永远不会被销毁的线程。
+
+重新调整代码
+
+```
+__weak typeof(self) weakSelf = self;
+self.thread = [[RunloopThread alloc] initWithBlock:^{
+    
+    NSLog(@"start - %s - %@", __FUNCTION__, [NSThread currentThread]);
+    
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+    
+    while (!weakSelf.isStopped) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }
+    
+    NSLog(@"end - %s - %@", __FUNCTION__, [NSThread currentThread]);
+}];
+[self.thread start];
+```
+
+```
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+/**
+ * 真正要执行的方法
+ */
+- (void)test {
+    
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
+}
+
+/**
+ * button 点击方法
+ */
+- (void)stopThread {
+    
+    [self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+/**
+ * 停止Runloop
+ */
+- (void)stopSubThread {
+    
+    self.stopped = YES;
+    
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
+}
+```
+
+这样如果点击按钮的`stopThread`方法，再`pop`到前一个控制器的时候就不会再有问题了。并且控制器和`Thread`的`dealloc`方法也会被执行。
+
+![](https://upload-images.jianshu.io/upload_images/2069062-71393e81c50c7c76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+但是如果不靠点击按钮执行`stopThread`方法直接`pop`到前一个控制器的时候，还是会不走`dealloc`方法，因此我们需要在控制器的`dealloc`方法里手动调用`stopThread`方法。
+
+```
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+    [self stopThread];
+}
+```
+
+这样做以后，再进行测试`pop`，会发现程序直接崩溃。
+
+![](https://upload-images.jianshu.io/upload_images/2069062-0bd6a976eba84e7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+原因是在执行下面这句代码时，`waitUtilDone:NO`我们写的是`NO`，就代表不需要等待`stopSubThread`方法执行完毕，就进行接下来的代码的执行，但是与此同时控制器又被销毁了，而`stopSubThread`会被继续执行，这样就会造成坏内存访问。
+
+```
+/**
+ * button 点击方法
+ */
+- (void)stopThread {
+    
+    [self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+```
+
+解决办法就是等方法执行完以后再彻底销毁控制器。
+
+```
+[self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+```
+
+但是你又会发现，控制器确实可以被销毁了，程序也没有崩溃了，也走了控制器的`dealloc`方法，但是`Thread`的`dealloc`方法并没有走。如下图所示：
+
+![](https://upload-images.jianshu.io/upload_images/2069062-65821133fd760232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+原因是在下面这句代码，控制器被销毁了，`weakSelf`就为`nil`了，就相当于`whlie(YES)`，造成`Runloop`再次被启动。
+
+```
+while (!weakSelf.isStopped) {
+    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+}
+```
+
+解决办法如下
+
+```
+while (weakSelf && !weakSelf.isStopped) {
+```
