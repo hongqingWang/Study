@@ -10,6 +10,8 @@
 	- [load、initialize的调用顺序？](#3.2)
 - [Associate](#4)
 	- [利用Associate为Category增加成员变量](#4.1)
+- [Runtime](#7)
+	- [方法交换](#7.1)
 
 <h2 id=2>KVO</h2>
 
@@ -266,5 +268,36 @@ age
 - (NSString *)name {
     
     return objc_getAssociatedObject(self, _cmd);
+}
+```
+
+<h2 id=7>Runtime</h2>
+
+<h3 id=7.1>方法交换</h3>
+
+方法交换多用于自己实现的方法和系统的方法进行交换，以便增加一些我们想在其中处理问题的方法。比如，拦截系统中`UIButton`的点击事件。
+
+`UIButton`继承自`UIControl`，`UIControl`中有一个方法是可以拦截所有`Button`的点击事件的，如下：
+
+```
+- (void)sendAction:(SEL)action to:(nullable id)target forEvent:(nullable UIEvent *)event;
+```
+
+我们就可以为`UIControl`增加一个分类，在这个分类的`load`方法里用自己的方法去替换系统的方法。
+
+```
++ (void)load {
+    
+    Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
+    Method method2 = class_getInstanceMethod(self, @selector(qq_sendAction:to:forEvent:));
+    method_exchangeImplementations(method1, method2);
+}
+
+- (void)qq_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
+    
+    [self qq_sendAction:action to:target forEvent:event];
+    NSLog(@"%@", self);
+    NSLog(@"%@", target);
+    NSLog(@"%@", NSStringFromSelector(action));
 }
 ```

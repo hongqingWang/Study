@@ -12,7 +12,7 @@
 @implementation UIControl (Extension)
 
 + (void)load {
-//    UIButton
+    
     Method method1 = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
     Method method2 = class_getInstanceMethod(self, @selector(qq_sendAction:to:forEvent:));
     method_exchangeImplementations(method1, method2);
@@ -21,7 +21,9 @@
 - (void)qq_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     
     [self qq_sendAction:action to:target forEvent:event];
-    NSLog(@"%s", __FUNCTION__);
+    NSLog(@"%@", self);
+    NSLog(@"%@", target);
+    NSLog(@"%@", NSStringFromSelector(action));
 }
 
 @end
