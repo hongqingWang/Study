@@ -43,6 +43,7 @@
 		18A2B3D720EDB32400E1D5DE /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3D620EDB32400E1D5DE /* UIControl+Extension.m */; };
 		18A2B3DB20EE0F2800E1D5DE /* RunloopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3DA20EE0F2800E1D5DE /* RunloopTableViewController.m */; };
 		18A2B3DE20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3DD20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m */; };
+		18A2B3E120EE113E00E1D5DE /* RunloopThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B3E020EE113E00E1D5DE /* RunloopThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		18A2B3DA20EE0F2800E1D5DE /* RunloopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopTableViewController.m; sourceTree = "<group>"; };
 		18A2B3DC20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopKeepThreadAliveViewController.h; sourceTree = "<group>"; };
 		18A2B3DD20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopKeepThreadAliveViewController.m; sourceTree = "<group>"; };
+		18A2B3DF20EE113E00E1D5DE /* RunloopThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopThread.h; sourceTree = "<group>"; };
+		18A2B3E020EE113E00E1D5DE /* RunloopThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +274,8 @@
 				18A2B3DA20EE0F2800E1D5DE /* RunloopTableViewController.m */,
 				18A2B3DC20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.h */,
 				18A2B3DD20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m */,
+				18A2B3DF20EE113E00E1D5DE /* RunloopThread.h */,
+				18A2B3E020EE113E00E1D5DE /* RunloopThread.m */,
 			);
 			path = Runloop;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				18A2B3A520E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m in Sources */,
 				18A2B3C120ECA70E00E1D5DE /* RuntimeCat.m in Sources */,
 				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
+				18A2B3E120EE113E00E1D5DE /* RunloopThread.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				18A2B3CE20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,

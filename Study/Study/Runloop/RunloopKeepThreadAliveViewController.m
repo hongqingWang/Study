@@ -7,8 +7,11 @@
 //
 
 #import "RunloopKeepThreadAliveViewController.h"
+#import "RunloopThread.h"
 
 @interface RunloopKeepThreadAliveViewController ()
+
+@property (nonatomic, strong) RunloopThread *thread;
 
 @end
 
@@ -20,10 +23,35 @@
     
     [self setupUI];
     
-//    RuntimePerson *person = [[RuntimePerson alloc] init];
-//    [person runtimeInstanceMethod];
-//    
-//    [RuntimePerson runtimeClassMethod];
+    self.thread = [[RunloopThread alloc] initWithTarget:self selector:@selector(run) object:nil];
+    [self.thread start];
+}
+
+#pragma mark - Event Response
+/**
+ * 线程保活
+ */
+- (void)run {
+    
+    NSLog(@"start - %s - %@", __FUNCTION__, [NSThread currentThread]);
+    
+    [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+    
+    NSLog(@"end - %s - %@", __FUNCTION__, [NSThread currentThread]);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
+}
+
+/**
+ * 真正要执行的方法
+ */
+- (void)test {
+    
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
 }
 
 #pragma mark - SetupUI
