@@ -460,3 +460,37 @@ while (!weakSelf.isStopped) {
 ```
 while (weakSelf && !weakSelf.isStopped) {
 ```
+
+至此，就可以解决出现的问题了。但是当我们如果先点击`停止线程`按钮执行`stopThread`方法时，再进行`pop`操作的时候，程序又会崩溃在如下位置。当点击返回按钮时，再对已经停止`Runloop`的线程进行操作，造成了程序崩溃。
+
+![](https://upload-images.jianshu.io/upload_images/2069062-b7203dfea6cda713.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+当我们执行`stopThread`方法的时候需要对线程进行清空，然后再增加线程是否存在的逻辑判断，增加程序的严谨性。
+
+```
+/**
+ * 停止Runloop
+ */
+- (void)stopSubThread {
+    
+    self.stopped = YES;
+    
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
+    
+    // 清空线程
+    self.thread = nil;
+}
+```
+
+```
+/**
+ * button 点击方法
+ */
+- (void)stopThread {
+    
+    if (!self.thread) return;
+    
+    [self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+}
+```

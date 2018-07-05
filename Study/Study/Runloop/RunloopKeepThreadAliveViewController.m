@@ -48,6 +48,8 @@
 #pragma mark - Event Response
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+    if (!self.thread) return;
+    
     [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
 }
 
@@ -64,6 +66,8 @@
  */
 - (void)stopThread {
     
+    if (!self.thread) return;
+    
     [self performSelector:@selector(stopSubThread) onThread:self.thread withObject:nil waitUntilDone:YES];
 }
 
@@ -76,6 +80,9 @@
     
     CFRunLoopStop(CFRunLoopGetCurrent());
     NSLog(@"%s - %@", __FUNCTION__, [NSThread currentThread]);
+    
+    // 清空线程
+    self.thread = nil;
 }
 
 #pragma mark - SetupUI
