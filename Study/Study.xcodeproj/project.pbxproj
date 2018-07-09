@@ -19,6 +19,8 @@
 		184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */; };
 		184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */; };
 		184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */; };
+		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
+		189A8A5D20F306C600F8F638 /* MemoryManageMRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5C20F306C600F8F638 /* MemoryManageMRCViewController.m */; };
 		18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */; };
 		18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */; };
 		18A2B39520E9C0F300E1D5DE /* AssociatePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39420E9C0F300E1D5DE /* AssociatePerson.m */; };
@@ -69,6 +71,10 @@
 		184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPrintMethodClassNameViewController.m; sourceTree = "<group>"; };
 		184E1FB520E6BA7B005C4097 /* KVOInterviewQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOInterviewQuestionViewController.h; sourceTree = "<group>"; };
 		184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOInterviewQuestionViewController.m; sourceTree = "<group>"; };
+		189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageTableViewController.h; sourceTree = "<group>"; };
+		189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageTableViewController.m; sourceTree = "<group>"; };
+		189A8A5B20F306C600F8F638 /* MemoryManageMRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageMRCViewController.h; sourceTree = "<group>"; };
+		189A8A5C20F306C600F8F638 /* MemoryManageMRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageMRCViewController.m; sourceTree = "<group>"; };
 		18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateTableViewController.h; sourceTree = "<group>"; };
 		18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociateTableViewController.m; sourceTree = "<group>"; };
 		18A2B39020E9C03700E1D5DE /* AssociateAddIvarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateAddIvarViewController.h; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				18A2B39920E9D57600E1D5DE /* Block */,
 				18A2B3A920EC5D9A00E1D5DE /* Runtime */,
 				18A2B3D820EE0F0E00E1D5DE /* Runloop */,
+				189A8A5720F305F200F8F638 /* MemoryManage */,
 				18A2B3D420EDB30700E1D5DE /* Category */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
 				184E1F9220E5E25D005C4097 /* Assets.xcassets */,
@@ -187,6 +194,17 @@
 				184E1FAD20E62AF2005C4097 /* Person.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		189A8A5720F305F200F8F638 /* MemoryManage */ = {
+			isa = PBXGroup;
+			children = (
+				189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */,
+				189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */,
+				189A8A5B20F306C600F8F638 /* MemoryManageMRCViewController.h */,
+				189A8A5C20F306C600F8F638 /* MemoryManageMRCViewController.m */,
+			);
+			path = MemoryManage;
 			sourceTree = "<group>";
 		};
 		18A2B38B20E7628D00E1D5DE /* KVC */ = {
@@ -369,6 +387,7 @@
 				18A2B3A220E9D9B000E1D5DE /* BlockStaticVariableViewController.m in Sources */,
 				18A2B3A520E9DCD100E1D5DE /* BlockGlobalVariabalViewController.m in Sources */,
 				18A2B3C120ECA70E00E1D5DE /* RuntimeCat.m in Sources */,
+				189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */,
 				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
 				18A2B3E120EE113E00E1D5DE /* RunloopThread.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
@@ -381,6 +400,7 @@
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				18A2B3AC20EC5DB200E1D5DE /* RuntimeTableViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
+				189A8A5D20F306C600F8F638 /* MemoryManageMRCViewController.m in Sources */,
 				18A2B3C420ECAE5F00E1D5DE /* RuntimeTeacher.m in Sources */,
 				18A2B3DE20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m in Sources */,
 				184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */,

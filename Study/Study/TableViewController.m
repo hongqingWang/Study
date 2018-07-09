@@ -12,6 +12,7 @@
 #import "BlockTableViewController.h"
 #import "RuntimeTableViewController.h"
 #import "RunloopTableViewController.h"
+#import "MemoryManageTableViewController.h"
 
 @interface TableViewController ()
 
@@ -111,7 +112,9 @@
             break;
         case 9:
         {
-            NSLog(@"09-内存管理(未完) - 未完成");
+            MemoryManageTableViewController *vc = [[MemoryManageTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
