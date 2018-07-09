@@ -10,6 +10,9 @@
 
 @interface MemoryManageCopyViewController ()
 
+@property (nonatomic, strong) NSString *myStrongString;
+@property (nonatomic, copy) NSString *myCopyString;
+
 @end
 
 @implementation MemoryManageCopyViewController
@@ -20,11 +23,13 @@
     
     [self setupUI];
     
-//    [self copyString];
-    [self copyMutableString];
+//    [self copyStringInstanceMethod];
+//    [self copyMutableString];
+//    [self test];
+    [self testMutable];
 }
 
-- (void)copyString {
+- (void)copyStringInstanceMethod {
     
     NSString *str = @"abc";
     
@@ -37,9 +42,11 @@
     
     // Attempt to mutate immutable object with appendString:
     //    [str1 appendString:@"123"];
-    [str2 appendString:@"123"];
+//    [str2 appendString:@"123"];
+    [str1 stringByAppendingString:@"123"];
+    [str2 stringByAppendingString:@"123"];
     
-//    NSLog(@"str1 - appendString = %@", str1);
+    NSLog(@"str1 - appendString = %@", str1);
     NSLog(@"str2 - appendString = %@", str2);
 }
 
@@ -59,10 +66,57 @@
     
     // [NSTaggedPointerString appendString:]: unrecognized selector sent to instance 0xa000000006362613
 //    [str1 appendString:@"123"];
-    [str2 appendString:@"123"];
+//    [str2 appendString:@"123"];
     
-//    NSLog(@"str1 - appendString = %@", str1);
+    
+    
+    [str1 stringByAppendingString:@"123"];
+    [str2 stringByAppendingString:@"123"];
+    
+    NSLog(@"str1 - appendString = %@", str1);
     NSLog(@"str2 - appendString = %@", str2);
+}
+
+- (void)test {
+    
+    //新创建两个NSString对象
+    NSString * strong1 = @"I am Strong!";
+    NSString * copy1 = @"I am Copy!";
+    
+    //初始化两个字符串
+    self.myStrongString = strong1;
+    self.myCopyString = copy1;
+    
+    //两个NSString进行操作
+    [strong1 stringByAppendingString:@"11111"];
+    [copy1 stringByAppendingString:@"22222"];
+    
+    NSLog(@"%@", strong1);
+    NSLog(@"%@", self.myStrongString);
+    NSLog(@"%@", copy1);
+    NSLog(@"%@", self.myCopyString);
+}
+
+- (void)testMutable {
+    
+    NSMutableString *strong1 = [NSMutableString stringWithFormat:@"I am Strong!"];
+    NSMutableString *copy1 = [NSMutableString stringWithFormat:@"I am Copy!"];
+    
+    //初始化两个字符串
+    self.myStrongString = strong1;
+    self.myCopyString = copy1;
+    
+    //两个NSString进行操作
+//    [strong1 stringByAppendingString:@"11111"];
+//    [copy1 stringByAppendingString:@"22222"];
+
+    [strong1 appendString:@"111111"];
+    [copy1 appendString:@"222222"];
+    
+    NSLog(@"%@", strong1);
+    NSLog(@"%@", self.myStrongString);
+    NSLog(@"%@", copy1);
+    NSLog(@"%@", self.myCopyString);
 }
 
 #pragma mark - SetupUI
@@ -71,11 +125,19 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
 //    NSMutableString *mutableString = [[NSMutableString alloc] initWithString:@"abc"];
+
+    NSMutableString *mutableString = [[NSMutableString alloc] initWithString:@"abc"];
+    self.myStrongString = mutableString;
     
     UILabel *label = [[UILabel alloc] init];
     label.text = @"看控制台输出";
 //    label.text = mutableString;
 //    [mutableString appendString:@"def"];
+    label.text = self.myStrongString;
+    
+    [mutableString appendString:@"def"];
+    label.text = self.myStrongString;
+    
     label.font = [UIFont systemFontOfSize:24];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
