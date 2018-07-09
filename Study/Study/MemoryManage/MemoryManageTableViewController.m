@@ -7,7 +7,7 @@
 //
 
 #import "MemoryManageTableViewController.h"
-#import "MemoryManageMRCViewController.h"
+#import "MemoryManageCopyViewController.h"
 
 @interface MemoryManageTableViewController ()
 
@@ -49,7 +49,7 @@ static NSString * const ID = @"MemoryManageCellID";
     switch (indexPath.row) {
         case 0:
         {
-            MemoryManageMRCViewController *vc = [[MemoryManageMRCViewController alloc] init];
+            MemoryManageCopyViewController *vc = [[MemoryManageCopyViewController alloc] init];
             vc.navigationItem.title = self.memoryManageTitleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -64,8 +64,8 @@ static NSString * const ID = @"MemoryManageCellID";
 - (NSArray *)memoryManageTitleArray {
     if (_memoryManageTitleArray == nil) {
         _memoryManageTitleArray = @[
-                               @"01-MRC"
-                               ];
+                                    @"01-Copy"
+                                    ];
     }
     return _memoryManageTitleArray;
 }

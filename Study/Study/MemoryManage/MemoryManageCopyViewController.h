@@ -1,5 +1,5 @@
 //
-//  MemoryManageMRCViewController.h
+//  MemoryManageCopyViewController.h
 //  Study
 //
 //  Created by 王红庆 on 2018/7/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MemoryManageMRCViewController : UIViewController
+@interface MemoryManageCopyViewController : UIViewController
 
 @end
