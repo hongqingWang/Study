@@ -20,10 +20,38 @@
     
     [self setupUI];
     
-//    RuntimePerson *person = [[RuntimePerson alloc] init];
-//    [person runtimeInstanceMethod];
-//
-//    [RuntimePerson runtimeClassMethod];
+    /**
+     * 以下哪种情况运行时可能会造成内存飙升？为什么？
+     * A.image;     B.label;    C.string;   D.都不会;
+     */
+    for (int i = 0; i < MAXFLOAT; i++) {
+        
+        @autoreleasepool {
+            
+            /**
+             * A.image;
+             */
+//            UIImage *image = [[UIImage alloc] init];
+            
+            /**
+             * B.label;
+             */
+//            UILabel *label = [[UILabel alloc] init];
+            
+            /**
+             * C.string;
+             */
+//            NSString *string = @"abc";
+//            string = [string stringByAppendingString:@"xyz"];
+        }
+    }
+    
+    /**
+     * 答案是
+     * B.label;
+     * 原因:
+     * ---
+     */
 }
 
 #pragma mark - SetupUI
@@ -32,7 +60,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"看控制台输出";
+    label.text = @"MemoryManageMemoryIncreaseViewController";
     label.font = [UIFont systemFontOfSize:24];
     label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:label];
