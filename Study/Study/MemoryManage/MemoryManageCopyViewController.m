@@ -24,9 +24,9 @@
     [self setupUI];
     
 //    [self copyStringInstanceMethod];
-//    [self copyMutableString];
+    [self copyMutableString];
 //    [self test];
-    [self testMutable];
+//    [self testMutable];
 }
 
 - (void)copyStringInstanceMethod {
@@ -61,8 +61,8 @@
     [str appendString:@"456"];
     
     NSLog(@"str = %@ %p", str, str);
-    NSLog(@"str1 = %@ %p", str1, str1);
-    NSLog(@"str2 = %@ %p", str2, str2);
+    NSLog(@"str1 = %@ %p %p", str1, str1, &str1);
+    NSLog(@"str2 = %@ %p %p", str2, str2, &str2);
     
     // [NSTaggedPointerString appendString:]: unrecognized selector sent to instance 0xa000000006362613
 //    [str1 appendString:@"123"];

@@ -8,6 +8,7 @@
 
 #import "MemoryManageTableViewController.h"
 #import "MemoryManageCopyViewController.h"
+#import "MemoryManageMemoryIncreaseViewController.h"
 
 @interface MemoryManageTableViewController ()
 
@@ -54,6 +55,13 @@ static NSString * const ID = @"MemoryManageCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 1:
+        {
+            MemoryManageMemoryIncreaseViewController *vc = [[MemoryManageMemoryIncreaseViewController alloc] init];
+            vc.navigationItem.title = self.memoryManageTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -64,7 +72,8 @@ static NSString * const ID = @"MemoryManageCellID";
 - (NSArray *)memoryManageTitleArray {
     if (_memoryManageTitleArray == nil) {
         _memoryManageTitleArray = @[
-                                    @"01-Copy"
+                                    @"01-Copy",
+                                    @"02-内存飙升问题"
                                     ];
     }
     return _memoryManageTitleArray;
