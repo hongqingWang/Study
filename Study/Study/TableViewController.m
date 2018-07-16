@@ -12,6 +12,7 @@
 #import "BlockTableViewController.h"
 #import "RuntimeTableViewController.h"
 #import "RunloopTableViewController.h"
+#import "ThreadTableViewController.h"
 #import "MemoryManageTableViewController.h"
 
 @interface TableViewController ()
@@ -107,7 +108,9 @@
             break;
         case 8:
         {
-            NSLog(@"08-多线程(未完) - 未完成");
+            ThreadTableViewController *vc = [[ThreadTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 9:
@@ -135,7 +138,7 @@
                         @"06-Block",
                         @"07-Runtime",
                         @"08-Runloop",
-                        @"09-多线程(未完)",
+                        @"09-多线程",
                         @"10-内存管理",
                         @"11-性能优化(未完)"
                         ];

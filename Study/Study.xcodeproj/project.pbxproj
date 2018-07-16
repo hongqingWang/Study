@@ -22,6 +22,8 @@
 		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
 		189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */; };
 		189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */; };
+		189A8A8D20FCDECE00F8F638 /* ThreadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8C20FCDECD00F8F638 /* ThreadTableViewController.m */; };
+		189A8A9020FCDFF200F8F638 /* ThreadBarrierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8F20FCDFF200F8F638 /* ThreadBarrierViewController.m */; };
 		18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */; };
 		18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39120E9C03700E1D5DE /* AssociateAddIvarViewController.m */; };
 		18A2B39520E9C0F300E1D5DE /* AssociatePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2B39420E9C0F300E1D5DE /* AssociatePerson.m */; };
@@ -78,6 +80,10 @@
 		189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageCopyViewController.m; sourceTree = "<group>"; };
 		189A8A8720FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageMemoryIncreaseViewController.h; sourceTree = "<group>"; };
 		189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageMemoryIncreaseViewController.m; sourceTree = "<group>"; };
+		189A8A8B20FCDECD00F8F638 /* ThreadTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTableViewController.h; sourceTree = "<group>"; };
+		189A8A8C20FCDECD00F8F638 /* ThreadTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTableViewController.m; sourceTree = "<group>"; };
+		189A8A8E20FCDFF200F8F638 /* ThreadBarrierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadBarrierViewController.h; sourceTree = "<group>"; };
+		189A8A8F20FCDFF200F8F638 /* ThreadBarrierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadBarrierViewController.m; sourceTree = "<group>"; };
 		18A2B38D20E9BED600E1D5DE /* AssociateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateTableViewController.h; sourceTree = "<group>"; };
 		18A2B38E20E9BED600E1D5DE /* AssociateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssociateTableViewController.m; sourceTree = "<group>"; };
 		18A2B39020E9C03700E1D5DE /* AssociateAddIvarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssociateAddIvarViewController.h; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 				18A2B39920E9D57600E1D5DE /* Block */,
 				18A2B3A920EC5D9A00E1D5DE /* Runtime */,
 				18A2B3D820EE0F0E00E1D5DE /* Runloop */,
+				189A8A8A20FCDEB300F8F638 /* Thread */,
 				189A8A5720F305F200F8F638 /* MemoryManage */,
 				18A2B3D420EDB30700E1D5DE /* Category */,
 				184E1F8F20E5E25B005C4097 /* Main.storyboard */,
@@ -210,6 +217,17 @@
 				189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */,
 			);
 			path = MemoryManage;
+			sourceTree = "<group>";
+		};
+		189A8A8A20FCDEB300F8F638 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				189A8A8B20FCDECD00F8F638 /* ThreadTableViewController.h */,
+				189A8A8C20FCDECD00F8F638 /* ThreadTableViewController.m */,
+				189A8A8E20FCDFF200F8F638 /* ThreadBarrierViewController.h */,
+				189A8A8F20FCDFF200F8F638 /* ThreadBarrierViewController.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		18A2B38B20E7628D00E1D5DE /* KVC */ = {
@@ -398,6 +416,7 @@
 				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
 				18A2B3E120EE113E00E1D5DE /* RunloopThread.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
+				189A8A8D20FCDECE00F8F638 /* ThreadTableViewController.m in Sources */,
 				18A2B3CE20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
@@ -406,6 +425,7 @@
 				18A2B3DB20EE0F2800E1D5DE /* RunloopTableViewController.m in Sources */,
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
 				18A2B3AC20EC5DB200E1D5DE /* RuntimeTableViewController.m in Sources */,
+				189A8A9020FCDFF200F8F638 /* ThreadBarrierViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,
 				18A2B3C420ECAE5F00E1D5DE /* RuntimeTeacher.m in Sources */,
 				18A2B3DE20EE0FFB00E1D5DE /* RunloopKeepThreadAliveViewController.m in Sources */,
