@@ -33,7 +33,9 @@
      * 3
      * 2 (每隔两秒钟执行一次)
      */
-    [self test2];
+//    [self test2];
+    
+    [self test3];
 }
 
 - (void)test1 {
@@ -65,8 +67,33 @@
          * timer 源码是在 Runloop 里, 相当于被添加到子线程的 Runloop, 但子线程的 Runloop 默认是不开启的,
          需要我们手动开启。
          */
+//        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc] init] forMode:NSDefaultRunLoopMode];
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
     });
+}
+
+- (void)test3 {
+    
+    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"1");
+        
+        /**
+         * 加上这句就不会崩溃了
+         */
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }];
+    [thread start];
+    
+    /**
+     * [ThreadTimerViewController performSelector:onThread:withObject:waitUntilDone:modes:]: target thread exited while waiting for the perform
+     * 执行`test`方法时, 线程已经退出了
+     */
+    [self performSelector:@selector(test) onThread:thread withObject:nil waitUntilDone:YES];
+}
+
+- (void)test {
+    
+    NSLog(@"2");
 }
 
 #pragma mark - SetupUI
