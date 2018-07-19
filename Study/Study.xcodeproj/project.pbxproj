@@ -19,6 +19,7 @@
 		184E1FB120E62FC0005C4097 /* KVOExplorationEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB020E62FC0005C4097 /* KVOExplorationEssenceViewController.m */; };
 		184E1FB420E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */; };
 		184E1FB720E6BA7B005C4097 /* KVOInterviewQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */; };
+		1866BFDA21000A9800064208 /* ThreadTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866BFD921000A9800064208 /* ThreadTimerViewController.m */; };
 		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
 		189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */; };
 		189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */; };
@@ -74,6 +75,8 @@
 		184E1FB320E6AF84005C4097 /* KVOPrintMethodClassNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPrintMethodClassNameViewController.m; sourceTree = "<group>"; };
 		184E1FB520E6BA7B005C4097 /* KVOInterviewQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOInterviewQuestionViewController.h; sourceTree = "<group>"; };
 		184E1FB620E6BA7B005C4097 /* KVOInterviewQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOInterviewQuestionViewController.m; sourceTree = "<group>"; };
+		1866BFD821000A9800064208 /* ThreadTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTimerViewController.h; sourceTree = "<group>"; };
+		1866BFD921000A9800064208 /* ThreadTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTimerViewController.m; sourceTree = "<group>"; };
 		189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageTableViewController.h; sourceTree = "<group>"; };
 		189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageTableViewController.m; sourceTree = "<group>"; };
 		189A8A5E20F34F6D00F8F638 /* MemoryManageCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageCopyViewController.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				189A8A8C20FCDECD00F8F638 /* ThreadTableViewController.m */,
 				189A8A8E20FCDFF200F8F638 /* ThreadBarrierViewController.h */,
 				189A8A8F20FCDFF200F8F638 /* ThreadBarrierViewController.m */,
+				1866BFD821000A9800064208 /* ThreadTimerViewController.h */,
+				1866BFD921000A9800064208 /* ThreadTimerViewController.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */,
 				189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */,
 				189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */,
+				1866BFDA21000A9800064208 /* ThreadTimerViewController.m in Sources */,
 				18A2B39220E9C03700E1D5DE /* AssociateAddIvarViewController.m in Sources */,
 				18A2B3E120EE113E00E1D5DE /* RunloopThread.m in Sources */,
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,

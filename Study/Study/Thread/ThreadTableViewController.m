@@ -8,6 +8,7 @@
 
 #import "ThreadTableViewController.h"
 #import "ThreadBarrierViewController.h"
+#import "ThreadTimerViewController.h"
 
 @interface ThreadTableViewController ()
 
@@ -56,7 +57,9 @@ static NSString * const ID = @"ThreadCellID";
             break;
         case 1:
         {
-            
+            ThreadTimerViewController *vc = [[ThreadTimerViewController alloc] init];
+            vc.navigationItem.title = self.threadTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
@@ -69,7 +72,8 @@ static NSString * const ID = @"ThreadCellID";
 - (NSArray *)threadTitleArray {
     if (_threadTitleArray == nil) {
         _threadTitleArray = @[
-                              @"01-死锁"
+                              @"01-死锁",
+                              @"02-子线程Timer"
                               ];
     }
     return _threadTitleArray;
