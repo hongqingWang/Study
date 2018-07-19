@@ -35,7 +35,8 @@
      */
 //    [self test2];
     
-    [self test3];
+//    [self test3];
+    [self test4];
 }
 
 - (void)test1 {
@@ -94,6 +95,32 @@
 - (void)test {
     
     NSLog(@"2");
+}
+
+- (void)test4 {
+    
+    /**
+     * 等待任务1和任务2执行完毕后
+     * 再回到主线程执行任务3
+     */
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_queue_create("my_queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务1 - %d %@", i, [NSThread currentThread]);
+        }
+    });
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务2 - %d %@", i, [NSThread currentThread]);
+        }
+    });
+    dispatch_group_async(group, dispatch_get_main_queue(), ^{
+        for (int i = 0; i < 5; i++) {
+            NSLog(@"任务3 - %d %@", i, [NSThread currentThread]);
+        }
+    });
 }
 
 #pragma mark - SetupUI
