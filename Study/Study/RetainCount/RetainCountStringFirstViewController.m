@@ -21,8 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%s", __FUNCTION__);
-    
     /*
      string02 = 123
         - retainCount = 1152921504606846975
