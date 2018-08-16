@@ -8,16 +8,17 @@
 //
 
 #import "RetainCountTableViewController.h"
+#import "RetainCountStringFirstViewController.h"
 
 @interface RetainCountTableViewController ()
 
-@property (nonatomic, strong) NSArray *kvoTitleArray;
+@property (nonatomic, strong) NSArray *retainCountTitleArray;
 
 @end
 
 @implementation RetainCountTableViewController
 
-static NSString * const ID = @"KVOCellID";
+static NSString * const ID = @"RetainCountCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +28,7 @@ static NSString * const ID = @"KVOCellID";
 
 #pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.kvoTitleArray.count;
+    return self.retainCountTitleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -37,7 +38,7 @@ static NSString * const ID = @"KVOCellID";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
-    cell.textLabel.text = self.kvoTitleArray[indexPath.row];
+    cell.textLabel.text = self.retainCountTitleArray[indexPath.row];
     
     return cell;
 }
@@ -49,26 +50,9 @@ static NSString * const ID = @"KVOCellID";
     switch (indexPath.row) {
         case 0:
         {
-//            KVOBaseUseViewController *vc = [[KVOBaseUseViewController alloc] init];
-//            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 1:
-        {
-//            KVOExplorationEssenceViewController *vc = [[KVOExplorationEssenceViewController alloc] init];
-//            vc.navigationItem.title = self.kvoTitleArray[indexPath.row];
-//            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
+            RetainCountStringFirstViewController *vc = [[RetainCountStringFirstViewController alloc] init];
+            vc.navigationItem.title = self.retainCountTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             
@@ -78,16 +62,16 @@ static NSString * const ID = @"KVOCellID";
 }
 
 #pragma mark - Getters And Setters
-- (NSArray *)kvoTitleArray {
-    if (_kvoTitleArray == nil) {
-        _kvoTitleArray = @[
-                           @"01-KVO基本使用",
-                           @"02-探究KVO的本质",
-                           @"03-打印KVO新生成类中的方法",
-                           @"04-面试题"
-                           ];
+- (NSArray *)retainCountTitleArray {
+    if (_retainCountTitleArray == nil) {
+        _retainCountTitleArray = @[
+                                   @"01-字面量",
+                                   @"02-initWithFormat",
+                                   @"03-stringWithFormat",
+                                   @"04-stringWithString"
+                                   ];
     }
-    return _kvoTitleArray;
+    return _retainCountTitleArray;
 }
 
 @end

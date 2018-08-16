@@ -128,11 +128,17 @@
             break;
         case 11:
         {
+            NSLog(@"12-架构相关(未完)");
+        }
+            break;
+        case 12:
+        {
             RetainCountTableViewController *vc = [[RetainCountTableViewController alloc] init];
             vc.navigationItem.title = self.titleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+
             
         default:
             break;
@@ -154,7 +160,8 @@
                         @"09-多线程",
                         @"10-内存管理",
                         @"11-性能优化(未完)",
-                        @"12-架构相关(未完)"
+                        @"12-架构相关(未完)",
+                        @"13-RetainCount"
                         ];
     }
     return _titleArray;
