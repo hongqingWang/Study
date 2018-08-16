@@ -11,6 +11,7 @@
 #import "RetainCountStringFirstViewController.h"
 #import "RetainCountStringSecondViewController.h"
 #import "RetainCountStringThirdViewController.h"
+#import "RetainCountStringFourthViewController.h"
 
 @interface RetainCountTableViewController ()
 
@@ -67,6 +68,13 @@ static NSString * const ID = @"RetainCountCellID";
         case 2:
         {
             RetainCountStringThirdViewController *vc = [[RetainCountStringThirdViewController alloc] init];
+            vc.navigationItem.title = self.retainCountTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            RetainCountStringFourthViewController *vc = [[RetainCountStringFourthViewController alloc] init];
             vc.navigationItem.title = self.retainCountTitleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
