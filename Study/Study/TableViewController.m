@@ -14,6 +14,7 @@
 #import "RunloopTableViewController.h"
 #import "ThreadTableViewController.h"
 #import "MemoryManageTableViewController.h"
+#import "RetainCountTableViewController.h"
 
 @interface TableViewController ()
 
@@ -120,6 +121,18 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 10:
+        {
+            NSLog(@"11-性能优化(未完)");
+        }
+            break;
+        case 11:
+        {
+            RetainCountTableViewController *vc = [[RetainCountTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -140,7 +153,8 @@
                         @"08-Runloop",
                         @"09-多线程",
                         @"10-内存管理",
-                        @"11-性能优化(未完)"
+                        @"11-性能优化(未完)",
+                        @"12-架构相关(未完)"
                         ];
     }
     return _titleArray;
