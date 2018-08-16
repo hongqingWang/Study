@@ -21,24 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%s", __FUNCTION__);
-    
     /*
      string02 = 123
-     - retainCount = 1152921504606846975
+        - retainCount = 9223372036854775807
      string02 = 123adasdasdasdasdasdadsadsasdasd
-     - retainCount = 1152921504606846975
+        - retainCount = 2
      */
-    NSString *string02 = @"123";
-    //    NSString *string02 = @"123adasdasdasdasdasdadsadsasdasd";
-    /*
-     string02 = 123
-     - retainCount = 9223372036854775807
-     string02 = 123adasdasdasdasdasdadsadsasdasd
-     - retainCount = 1
-     */
-    //    NSString *string02 = [[NSString alloc] initWithFormat:@"123"];
-    //    NSString *string02 = [[NSString alloc] initWithFormat:@"123adasdasdasdasdasdadsadsasdasd"];
+//    NSString *string02 = [NSString stringWithFormat:@"123"];
+    NSString *string02 = [NSString stringWithFormat:@"123adasdasdasdasdasdadsadsasdasd"];
     
     NSLog(@"string02 retainCount = %ld", (long)CFGetRetainCount((__bridge CFTypeRef)(string02)));
     
@@ -52,9 +42,9 @@
     
     /*
      string02 = 123
-     - string01 = 123
+        - string01 = 123
      string02 = 123adasdasdasdasdasdadsadsasdasd
-     - string01 = (null)
+        - string01 = 123adasdasdasdasdasdadsadsasdasd
      */
     NSLog(@"%s - string01 = %@", __FUNCTION__, string01);
 }
@@ -64,9 +54,9 @@
     
     /*
      string02 = 123
-     - string01 = 123
+        - string01 = 123
      string02 = 123adasdasdasdasdasdadsadsasdasd
-     - string01 = (null)
+        - string01 = (null)
      */
     NSLog(@"%s - string01 = %@", __FUNCTION__, string01);
 }
