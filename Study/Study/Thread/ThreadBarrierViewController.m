@@ -23,10 +23,48 @@
     /**
      * 下面代码会造成死锁
      */
-    dispatch_sync(dispatch_get_main_queue(), ^{
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//
+//        NSLog(@"aaa");
+//    });
+    
+//    NSLog(@"1");
+//
+//    NSLog(@"1 - %@", [NSThread currentThread]);
+//
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        NSLog(@"2");
+//        NSLog(@"2 - %@", [NSThread currentThread]);
+//
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            NSLog(@"3");
+//            NSLog(@"3 - %@", [NSThread currentThread]);
+//        });
+//
+//        NSLog(@"4");
+//        NSLog(@"4 - %@", [NSThread currentThread]);
+//    });
+//
+//    NSLog(@"5");
+//    NSLog(@"5 - %@", [NSThread currentThread]);
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"1");
         
-        NSLog(@"aaa");
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"2");
+        });
+        
+        NSLog(@"3");
     });
+    
+    NSLog(@"4");
+    
+    while (1) {
+
+    }
+
+    NSLog(@"5");
 }
 
 #pragma mark - SetupUI
