@@ -35,20 +35,27 @@
 }
 
 - (void)saleTickets {
-    
+
+//    @synchronized (self) {
     while (YES) {
         
+//        @synchronized (self) {
         [NSThread sleepForTimeInterval:1];
         
+        // @synchronized 性能太差
         @synchronized (self) {
             if (self.tickets > 0) {
                 self.tickets--;
                 NSLog(@"%@ %d", [NSThread currentThread], self.tickets);
-            } else {
-                NSLog(@"没票了");
-                break;
+                continue;
             }
         }
+        
+        NSLog(@"没票了");
+        break;
+        
+        // @synchronized 锁不到这里,只能锁到上面的代码块
+//        NSLog(@"---");
     }
 }
 
