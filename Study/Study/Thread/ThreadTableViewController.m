@@ -9,6 +9,7 @@
 #import "ThreadTableViewController.h"
 #import "ThreadBarrierViewController.h"
 #import "ThreadTimerViewController.h"
+#import "ThreadVerbViewController.h"
 
 @interface ThreadTableViewController ()
 
@@ -62,6 +63,14 @@ static NSString * const ID = @"ThreadCellID";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            // 03-多线程资源抢夺
+            ThreadVerbViewController *vc = [[ThreadVerbViewController alloc] init];
+            vc.navigationItem.title = self.threadTitleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
         default:
             break;
@@ -73,7 +82,8 @@ static NSString * const ID = @"ThreadCellID";
     if (_threadTitleArray == nil) {
         _threadTitleArray = @[
                               @"01-死锁",
-                              @"02-子线程Timer"
+                              @"02-子线程Timer",
+                              @"03-多线程资源抢夺",
                               ];
     }
     return _threadTitleArray;
