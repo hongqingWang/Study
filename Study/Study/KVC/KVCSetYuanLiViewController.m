@@ -11,8 +11,6 @@
 
 @interface KVCSetYuanLiViewController ()
 
-@property (nonatomic, strong) KVCPerson *person;
-
 @end
 
 @implementation KVCSetYuanLiViewController

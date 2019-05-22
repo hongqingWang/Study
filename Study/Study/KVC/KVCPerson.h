@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
     int isAge;
 }
 
-//@property (nonatomic, assign) int age;
+@property (nonatomic, assign) int age;
 
 @end
 

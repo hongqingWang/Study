@@ -30,6 +30,7 @@
 		1883EC252294E1AC00061226 /* KVCBaseUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC242294E1AC00061226 /* KVCBaseUseViewController.m */; };
 		1883EC282294E23700061226 /* KVCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC272294E23700061226 /* KVCPerson.m */; };
 		1883EC2B2294E45900061226 /* KVCSetYuanLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC2A2294E45900061226 /* KVCSetYuanLiViewController.m */; };
+		1883EC2E2294F4A600061226 /* KVCGetYuanLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC2D2294F4A600061226 /* KVCGetYuanLiViewController.m */; };
 		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
 		189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */; };
 		189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */; };
@@ -107,6 +108,8 @@
 		1883EC272294E23700061226 /* KVCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCPerson.m; sourceTree = "<group>"; };
 		1883EC292294E45900061226 /* KVCSetYuanLiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCSetYuanLiViewController.h; sourceTree = "<group>"; };
 		1883EC2A2294E45900061226 /* KVCSetYuanLiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCSetYuanLiViewController.m; sourceTree = "<group>"; };
+		1883EC2C2294F4A600061226 /* KVCGetYuanLiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCGetYuanLiViewController.h; sourceTree = "<group>"; };
+		1883EC2D2294F4A600061226 /* KVCGetYuanLiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCGetYuanLiViewController.m; sourceTree = "<group>"; };
 		189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageTableViewController.h; sourceTree = "<group>"; };
 		189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageTableViewController.m; sourceTree = "<group>"; };
 		189A8A5E20F34F6D00F8F638 /* MemoryManageCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageCopyViewController.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 				1883EC242294E1AC00061226 /* KVCBaseUseViewController.m */,
 				1883EC292294E45900061226 /* KVCSetYuanLiViewController.h */,
 				1883EC2A2294E45900061226 /* KVCSetYuanLiViewController.m */,
+				1883EC2C2294F4A600061226 /* KVCGetYuanLiViewController.h */,
+				1883EC2D2294F4A600061226 /* KVCGetYuanLiViewController.m */,
 				1883EC262294E23700061226 /* KVCPerson.h */,
 				1883EC272294E23700061226 /* KVCPerson.m */,
 			);
@@ -498,6 +503,7 @@
 				18A2B3A820E9DE5E00E1D5DE /* BlockEssenceViewController.m in Sources */,
 				18A2B3DB20EE0F2800E1D5DE /* RunloopTableViewController.m in Sources */,
 				184E1FA820E5E6B4005C4097 /* KVOTableViewController.m in Sources */,
+				1883EC2E2294F4A600061226 /* KVCGetYuanLiViewController.m in Sources */,
 				18A2B3AC20EC5DB200E1D5DE /* RuntimeTableViewController.m in Sources */,
 				189A8A9020FCDFF200F8F638 /* ThreadBarrierViewController.m in Sources */,
 				184E1F8B20E5E25B005C4097 /* AppDelegate.m in Sources */,

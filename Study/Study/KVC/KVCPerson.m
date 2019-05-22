@@ -40,4 +40,28 @@
     return YES;
 }
 
+//- (int)getAge {
+//
+//    NSLog(@"getAge");
+//    return 11;
+//}
+//
+//- (int)age {
+//    
+//    NSLog(@"age");
+//    return 12;
+//}
+//
+//- (int)isAge {
+//    
+//    NSLog(@"isAge");
+//    return 13;
+//}
+//
+//- (int)_age {
+//    
+//    NSLog(@"_age");
+//    return 14;
+//}
+
 @end

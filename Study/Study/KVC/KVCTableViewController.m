@@ -9,8 +9,8 @@
 #import "KVCTableViewController.h"
 #import "KVCBaseUseViewController.h"
 #import "KVCSetYuanLiViewController.h"
+#import "KVCGetYuanLiViewController.h"
 
-#import "KVOPrintMethodClassNameViewController.h"
 #import "KVOInterviewQuestionViewController.h"
 
 @interface KVCTableViewController ()
@@ -67,7 +67,7 @@ static NSString * const ID = @"KVCCellID";
             break;
         case 2:
         {
-            KVOPrintMethodClassNameViewController *vc = [[KVOPrintMethodClassNameViewController alloc] init];
+            KVCGetYuanLiViewController *vc = [[KVCGetYuanLiViewController alloc] init];
             vc.navigationItem.title = self.kvcTitleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -91,8 +91,7 @@ static NSString * const ID = @"KVCCellID";
         _kvcTitleArray = @[
                            @"01-KVC基本使用",
                            @"02-KVC设值的原理",
-                           @"03-打印KVO新生成类中的方法",
-                           @"04-面试题"
+                           @"03-KVC取值原理"
                            ];
     }
     return _kvcTitleArray;
