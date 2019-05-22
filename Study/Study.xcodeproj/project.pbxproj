@@ -26,6 +26,7 @@
 		185896AA2125564F00368CC8 /* RetainCountStringFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185896A92125564F00368CC8 /* RetainCountStringFourthViewController.m */; };
 		1866BFDA21000A9800064208 /* ThreadTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866BFD921000A9800064208 /* ThreadTimerViewController.m */; };
 		1879167F228E636300424B20 /* ThreadVerbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879167E228E636300424B20 /* ThreadVerbViewController.m */; };
+		1883EC222294DE3800061226 /* KVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC212294DE3800061226 /* KVCTableViewController.m */; };
 		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
 		189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */; };
 		189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */; };
@@ -95,6 +96,8 @@
 		1866BFD921000A9800064208 /* ThreadTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTimerViewController.m; sourceTree = "<group>"; };
 		1879167D228E636300424B20 /* ThreadVerbViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVerbViewController.h; sourceTree = "<group>"; };
 		1879167E228E636300424B20 /* ThreadVerbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVerbViewController.m; sourceTree = "<group>"; };
+		1883EC202294DE3800061226 /* KVCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTableViewController.h; sourceTree = "<group>"; };
+		1883EC212294DE3800061226 /* KVCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTableViewController.m; sourceTree = "<group>"; };
 		189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageTableViewController.h; sourceTree = "<group>"; };
 		189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageTableViewController.m; sourceTree = "<group>"; };
 		189A8A5E20F34F6D00F8F638 /* MemoryManageCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageCopyViewController.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 		18A2B38B20E7628D00E1D5DE /* KVC */ = {
 			isa = PBXGroup;
 			children = (
+				1883EC202294DE3800061226 /* KVCTableViewController.h */,
+				1883EC212294DE3800061226 /* KVCTableViewController.m */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 			files = (
 				185896AA2125564F00368CC8 /* RetainCountStringFourthViewController.m in Sources */,
 				18A2B3BE20ECA54E00E1D5DE /* RuntimeForwardMethodViewController.m in Sources */,
+				1883EC222294DE3800061226 /* KVCTableViewController.m in Sources */,
 				18A2B3D220EDB00E00E1D5DE /* RuntimeExchangeMethodViewController.m in Sources */,
 				18A2B38F20E9BED600E1D5DE /* AssociateTableViewController.m in Sources */,
 				18A2B3D720EDB32400E1D5DE /* UIControl+Extension.m in Sources */,

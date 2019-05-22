@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "KVOTableViewController.h"
+#import "KVCTableViewController.h"
 #import "AssociateTableViewController.h"
 #import "BlockTableViewController.h"
 #import "RuntimeTableViewController.h"
@@ -72,7 +73,10 @@
             break;
         case 2:
         {
-            NSLog(@"02-KVC(未完) - 未完成");
+            KVCTableViewController *vc = [[KVCTableViewController alloc] init];
+            vc.navigationItem.title = self.titleArray[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
         }
         case 3:
         {
