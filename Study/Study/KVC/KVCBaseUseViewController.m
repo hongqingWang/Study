@@ -27,22 +27,20 @@
 //    [person setValue:@10 forKey:@"age"];
 //    NSLog(@"person.age = %d", person.age);
 
-    KVCPerson *person = [[KVCPerson alloc] init];
-    person.age = 10;
-    NSLog(@"person valueForKey = %@", [person valueForKey:@"age"]);
+//    KVCPerson *person = [[KVCPerson alloc] init];
+//    person.age = 10;
+//    NSLog(@"person valueForKey = %@", [person valueForKey:@"age"]);
+}
+
+- (void)dealloc {
+    
+    [self removeObserver:self forKeyPath:@"age"];
 }
 
 #pragma mark - SetupUI
 - (void)setupUI {
     
     self.view.backgroundColor = [UIColor whiteColor];
-//
-//    UILabel *label = [[UILabel alloc] init];
-//    label.text = @"点击屏幕";
-//    label.font = [UIFont systemFontOfSize:24];
-//    label.textAlignment = NSTextAlignmentCenter;
-//    [self.view addSubview:label];
-//    label.frame = self.view.bounds;
 }
 
 @end

@@ -10,9 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KVCPerson : NSObject
+@interface KVCPerson : NSObject {
+    
+    @public
+    int _age;
+    int _isAge;
+    int age;
+    int isAge;
+}
 
-@property (nonatomic, assign) int age;
+//@property (nonatomic, assign) int age;
 
 @end
 
