@@ -7,8 +7,8 @@
 //
 
 #import "KVCTableViewController.h"
+#import "KVCBaseUseViewController.h"
 
-#import "KVOBaseUseViewController.h"
 #import "KVOExplorationEssenceViewController.h"
 #import "KVOPrintMethodClassNameViewController.h"
 #import "KVOInterviewQuestionViewController.h"
@@ -53,7 +53,7 @@ static NSString * const ID = @"KVCCellID";
     switch (indexPath.row) {
         case 0:
         {
-            KVOBaseUseViewController *vc = [[KVOBaseUseViewController alloc] init];
+            KVCBaseUseViewController *vc = [[KVCBaseUseViewController alloc] init];
             vc.navigationItem.title = self.kvcTitleArray[indexPath.row];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -89,7 +89,7 @@ static NSString * const ID = @"KVCCellID";
 - (NSArray *)kvcTitleArray {
     if (_kvcTitleArray == nil) {
         _kvcTitleArray = @[
-                           @"01-KVO基本使用",
+                           @"01-KVC基本使用",
                            @"02-探究KVO的本质",
                            @"03-打印KVO新生成类中的方法",
                            @"04-面试题"

@@ -27,6 +27,8 @@
 		1866BFDA21000A9800064208 /* ThreadTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866BFD921000A9800064208 /* ThreadTimerViewController.m */; };
 		1879167F228E636300424B20 /* ThreadVerbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879167E228E636300424B20 /* ThreadVerbViewController.m */; };
 		1883EC222294DE3800061226 /* KVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC212294DE3800061226 /* KVCTableViewController.m */; };
+		1883EC252294E1AC00061226 /* KVCBaseUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC242294E1AC00061226 /* KVCBaseUseViewController.m */; };
+		1883EC282294E23700061226 /* KVCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883EC272294E23700061226 /* KVCPerson.m */; };
 		189A8A5A20F3060500F8F638 /* MemoryManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */; };
 		189A8A6020F34F6D00F8F638 /* MemoryManageCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A5F20F34F6D00F8F638 /* MemoryManageCopyViewController.m */; };
 		189A8A8920FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A8A8820FB798100F8F638 /* MemoryManageMemoryIncreaseViewController.m */; };
@@ -98,6 +100,10 @@
 		1879167E228E636300424B20 /* ThreadVerbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVerbViewController.m; sourceTree = "<group>"; };
 		1883EC202294DE3800061226 /* KVCTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTableViewController.h; sourceTree = "<group>"; };
 		1883EC212294DE3800061226 /* KVCTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTableViewController.m; sourceTree = "<group>"; };
+		1883EC232294E1AC00061226 /* KVCBaseUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCBaseUseViewController.h; sourceTree = "<group>"; };
+		1883EC242294E1AC00061226 /* KVCBaseUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCBaseUseViewController.m; sourceTree = "<group>"; };
+		1883EC262294E23700061226 /* KVCPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCPerson.h; sourceTree = "<group>"; };
+		1883EC272294E23700061226 /* KVCPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCPerson.m; sourceTree = "<group>"; };
 		189A8A5820F3060500F8F638 /* MemoryManageTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageTableViewController.h; sourceTree = "<group>"; };
 		189A8A5920F3060500F8F638 /* MemoryManageTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryManageTableViewController.m; sourceTree = "<group>"; };
 		189A8A5E20F34F6D00F8F638 /* MemoryManageCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryManageCopyViewController.h; sourceTree = "<group>"; };
@@ -281,6 +287,10 @@
 			children = (
 				1883EC202294DE3800061226 /* KVCTableViewController.h */,
 				1883EC212294DE3800061226 /* KVCTableViewController.m */,
+				1883EC232294E1AC00061226 /* KVCBaseUseViewController.h */,
+				1883EC242294E1AC00061226 /* KVCBaseUseViewController.m */,
+				1883EC262294E23700061226 /* KVCPerson.h */,
+				1883EC272294E23700061226 /* KVCPerson.m */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -472,7 +482,9 @@
 				184E1FAB20E5E9EB005C4097 /* KVOBaseUseViewController.m in Sources */,
 				189A8A8D20FCDECE00F8F638 /* ThreadTableViewController.m in Sources */,
 				18A2B3CE20ECDAFA00E1D5DE /* RuntimeAviodCrashViewController.m in Sources */,
+				1883EC252294E1AC00061226 /* KVCBaseUseViewController.m in Sources */,
 				184E1F9920E5E25D005C4097 /* main.m in Sources */,
+				1883EC282294E23700061226 /* KVCPerson.m in Sources */,
 				185896A72125563500368CC8 /* RetainCountStringThirdViewController.m in Sources */,
 				184E1FA120E5E396005C4097 /* TableViewController.m in Sources */,
 				1858969B21250F0000368CC8 /* RetainCountTableViewController.m in Sources */,
